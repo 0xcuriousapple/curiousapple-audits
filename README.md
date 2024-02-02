@@ -41,27 +41,27 @@ Apprentice (2 mo) > Associate (7 mo) > Lead (3 mo)
 
 ## Private Audits :seedling:
 
-| Client               | Report     | Duration  |   
-|-------------         |--------    |---------- |
-| WeFi Finance    | Private        | 1 week    |
-| Raft-1          | [Open](https://github.com/abhishekvispute/curiousapple-audits/blob/main/src/Raft-1.md)        | 2 days |
-| Raft-2          | [Open](https://github.com/abhishekvispute/curiousapple-audits/blob/main/src/Raft-2.md)        | 1 day  |
-| Raft-3          | [Open](https://gist.github.com/abhishekvispute/9537546b308ce08fdc20090c05b0f7d4)              | 1 day  |
-| Raft-4          | [Open](https://gist.github.com/abhishekvispute/d5777b11dc6c109dcb207150e8bb3b56)              | 2 days | 
-| Raft-5          | [Open](https://gist.github.com/abhishekvispute/d2d332af1edac19a6e856d309dc440c1)              | 3 days | 
+| Client               | Report   |   
+|-------------         |--------  |  
+| WeFi Finance    | Private       
+| Raft- 1, 2, 3, 4, 5  | [Open](https://github.com/abhishekvispute/curiousapple-audits/blob/main/src/Raft-1.md), [Open](https://github.com/abhishekvispute/curiousapple-audits/blob/main/src/Raft-2.md), [Open](https://gist.github.com/abhishekvispute/9537546b308ce08fdc20090c05b0f7d4), [Open](https://gist.github.com/abhishekvispute/d5777b11dc6c109dcb207150e8bb3b56), [Open](https://gist.github.com/abhishekvispute/d2d332af1edac19a6e856d309dc440c1)|
+| Ambire-1        | [Open](https://gist.github.com/abhishekvispute/3a670a8980991833df9ee124a6934e52)|             
+
 
 ## Bug Bounties :santa:
 
-1. Critical - Will reveal soon (1 month)
-2. Critical - Just resolved, will take some for disclosure
-3. High - Will reveal soon (1 month)
-4. High - Just resolved, will take some for disclosure
-5. Medium - Just resolved, will take some for disclosure
-6. Medium - [Spiral DAO](https://spiral.farm/) : [Report](https://gist.github.com/abhishekvispute/5b48f9d8072b15cd5b0c5371398df0f3)
-7. Medium - Will reveal soon (1 month)
-8. Low 
+1. Critical - [Thirdweb](https://gist.github.com/abhishekvispute/e3df31decac16d3859349b4247a3e50c)
+2. Critical - Will Reveal soon
+3. High - [Cow](https://gist.github.com/abhishekvispute/f68f63ab25f463f8f9fb5759209ab497) 
+4. High/Medium - [ERC1271 Issue, 15+ Teams affected](https://mirror.xyz/curiousapple.eth/pFqAdW2LiJ-6S4sg_u1z08k4vK6BCJ33LcyXpnNb8yU)
+5. High - [Thirdweb](https://gist.github.com/abhishekvispute/a47472a1107384cf5db1470dc8a6d2cb)
+6. Medium - [Raft](https://gist.github.com/abhishekvispute/ce1f4150674f2559e375b401a02dc776)
+7. Medium - [Spiral DAO](https://gist.github.com/abhishekvispute/5b48f9d8072b15cd5b0c5371398df0f3)
+8. Medium - Will reveal soon (1 month)
+Bunch of lows 
 
 ## Publications 📑:
-1. https://0xmacro.com/blog/how-to-consume-chainlink-price-feeds-safely/
-2. https://0xmacro.com/blog/solidity-gas-optimizations-cheat-sheet/
-3. https://0xmacro.com/blog/synthetix-staking-rewards-issue-inefficient-reward-distribution/
+1. [ERC1271 Replay - 15+ Teams Affected](https://mirror.xyz/curiousapple.eth/pFqAdW2LiJ-6S4sg_u1z08k4vK6BCJ33LcyXpnNb8yU)
+1. [How To Consume Chainlink Price Feeds Safely](https://0xmacro.com/blog/how-to-consume-chainlink-price-feeds-safely/)
+2. [Solidity Gas Optimizations Cheat Sheet](https://0xmacro.com/blog/solidity-gas-optimizations-cheat-sheet/)
+4. [Synthetix Staking Rewards Issue - Inefficient Reward Distribution](https://0xmacro.com/blog/synthetix-staking-rewards-issue-inefficient-reward-distribution/)
