@@ -58,6 +58,7 @@ Apprentice (2 mo) > Associate (7 mo) > Lead (3 mo)
 6. Medium - [Raft](https://gist.github.com/abhishekvispute/ce1f4150674f2559e375b401a02dc776)
 7. Medium - [Spiral DAO](https://gist.github.com/abhishekvispute/5b48f9d8072b15cd5b0c5371398df0f3)
 8. Medium - Will reveal soon (1 month)
+
 Bunch of lows 
 
 ## Publications 📑:
