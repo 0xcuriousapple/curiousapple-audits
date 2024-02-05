@@ -63,6 +63,6 @@ Bunch of lows
 
 ## Publications 📑:
 1. [ERC1271 Replay - 15+ Teams Affected](https://mirror.xyz/curiousapple.eth/pFqAdW2LiJ-6S4sg_u1z08k4vK6BCJ33LcyXpnNb8yU)
-1. [How To Consume Chainlink Price Feeds Safely](https://0xmacro.com/blog/how-to-consume-chainlink-price-feeds-safely/)
-2. [Solidity Gas Optimizations Cheat Sheet](https://0xmacro.com/blog/solidity-gas-optimizations-cheat-sheet/)
-4. [Synthetix Staking Rewards Issue - Inefficient Reward Distribution](https://0xmacro.com/blog/synthetix-staking-rewards-issue-inefficient-reward-distribution/)
+1. [How To Consume Chainlink Price Feeds Safely](https://0xmacro.com/writing/how-to-consume-chainlink-price-feeds-safely)
+2. [Solidity Gas Optimizations Cheat Sheet](https://0xmacro.com/writing/solidity-gas-optimizations-cheat-sheet)
+4. [Synthetix Staking Rewards Issue - Inefficient Reward Distribution](https://0xmacro.com/writing/synthetix-staking-rewards-issue-inefficient-reward-distribution)
