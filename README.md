@@ -55,9 +55,12 @@ Apprentice (2 mo) > Associate (7 mo) > Lead (3 mo)
 3. High - [Cow](https://gist.github.com/abhishekvispute/f68f63ab25f463f8f9fb5759209ab497) 
 4. High/Medium - [ERC1271 Issue, 15+ Teams affected](https://mirror.xyz/curiousapple.eth/pFqAdW2LiJ-6S4sg_u1z08k4vK6BCJ33LcyXpnNb8yU)
 5. High - [Thirdweb](https://gist.github.com/abhishekvispute/a47472a1107384cf5db1470dc8a6d2cb)
-6. Medium - [Raft](https://gist.github.com/abhishekvispute/ce1f4150674f2559e375b401a02dc776)
-7. Medium - [Spiral DAO](https://gist.github.com/abhishekvispute/5b48f9d8072b15cd5b0c5371398df0f3)
-8. Medium - Will reveal soon (1 month)
+6. High - (Reported in Jan, TBA)
+7. High - (Reported in Feb, TBA)
+8. Medium - (Reported in Feb, TBA)
+9. Medium - [Raft](https://gist.github.com/abhishekvispute/ce1f4150674f2559e375b401a02dc776)
+10. Medium - [Spiral DAO](https://gist.github.com/abhishekvispute/5b48f9d8072b15cd5b0c5371398df0f3)
+11. Medium - Will reveal soon (1 month)
 
 Bunch of lows 
 
