@@ -53,7 +53,7 @@ Apprentice (2 mo) > Associate (7 mo) > Lead (3 mo)
 1. Critical - [Thirdweb](https://gist.github.com/abhishekvispute/e3df31decac16d3859349b4247a3e50c)
 2. Critical - Will Reveal soon
 3. High - [Cow](https://gist.github.com/abhishekvispute/f68f63ab25f463f8f9fb5759209ab497) 
-4. High/Medium - [Ambire](https://gist.github.com/abhishekvispute/6e45a013b1a4878c584941f2958c19bc)[ERC1271 Issue, 15+ Teams affected](https://mirror.xyz/curiousapple.eth/pFqAdW2LiJ-6S4sg_u1z08k4vK6BCJ33LcyXpnNb8yU)
+4. High/Medium - [Ambire](https://gist.github.com/abhishekvispute/6e45a013b1a4878c584941f2958c19bc), [ERC1271 Issue, 15+ Teams affected](https://mirror.xyz/curiousapple.eth/pFqAdW2LiJ-6S4sg_u1z08k4vK6BCJ33LcyXpnNb8yU)
 5. High - [Thirdweb](https://gist.github.com/abhishekvispute/a47472a1107384cf5db1470dc8a6d2cb)
 6. High - Reported in Jan, TBA
 7. High - Reported in Feb, TBA
