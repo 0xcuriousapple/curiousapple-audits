@@ -46,7 +46,7 @@ Apprentice (2 mo) > Associate (7 mo) > Lead (3 mo)
 | WeFi Finance    | Private       
 | Raft- 1, 2, 3, 4, 5  | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/Raft-1.md), [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/Raft-2.md), [Open](https://gist.github.com/0xcuriousapple/9537546b308ce08fdc20090c05b0f7d4), [Open](https://gist.github.com/0xcuriousapple/d5777b11dc6c109dcb207150e8bb3b56), [Open](https://gist.github.com/0xcuriousapple/d2d332af1edac19a6e856d309dc440c1)|
 | Ambire-1        | [Open](https://gist.github.com/0xcuriousapple/3a670a8980991833df9ee124a6934e52)|    
-| Nostra-1        | (Open)(https://gist.github.com/0xcuriousapple/3c306d93f884348c82b444c8ac2194ff)|         
+| Nostra-1        | [Open](https://gist.github.com/0xcuriousapple/3c306d93f884348c82b444c8ac2194ff)|         
 
 
 ## Bug Bounties :santa:
