@@ -57,7 +57,7 @@ Apprentice (2 mo) > Associate (7 mo) > Lead (3 mo)
 4. High/Medium - [Ambire](https://gist.github.com/0xcuriousapple/6e45a013b1a4878c584941f2958c19bc), [ERC1271 Issue, 15+ Teams affected](https://mirror.xyz/curiousapple.eth/pFqAdW2LiJ-6S4sg_u1z08k4vK6BCJ33LcyXpnNb8yU)
 5. High - [Thirdweb](https://gist.github.com/0xcuriousapple/a47472a1107384cf5db1470dc8a6d2cb)
 6. High - Reported in Jan, TBA
-7. High - Reported in Feb, TBA
+7. High - [Connext](https://gist.github.com/0xcuriousapple/5a624d56d95c49b2a18f9ed64f070376)
 8. Medium - Reported in Feb, TBA
 9. Medium - [Raft](https://gist.github.com/0xcuriousapple/ce1f4150674f2559e375b401a02dc776)
 10. Medium - [Spiral DAO](https://gist.github.com/0xcuriousapple/5b48f9d8072b15cd5b0c5371398df0f3)
