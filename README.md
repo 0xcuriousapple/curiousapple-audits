@@ -58,7 +58,7 @@ Apprentice (2 mo) > Associate (7 mo) > Lead (3 mo)
 | Severity | Project | Type | Report |
 |----------|---------|------|--------|
 | 🏆 Critical | Thirdweb | Independent Bug Bounty | [View Details](https://gist.github.com/0xcuriousapple/e3df31decac16d3859349b4247a3e50c) |
-| 🏆 Critical | Rhinestone | Independent Bug Bounty | [View Details](https://gist.github.com/0xcuriousapple/d7128a1d8ee342e21e8cea3350687566) |
+| 🏆 Critical | Rhinestone *** | Independent Bug Bounty *** | [View Details](https://gist.github.com/0xcuriousapple/d7128a1d8ee342e21e8cea3350687566) |
 | 🔥 High | Rhinestone | Independent Bug Bounty | [View Details](https://gist.github.com/0xcuriousapple/6c099551fc45274c20f7fb773ad5f2a0) |
 | 🔥 High | Cow | Immunefi | [View Details](https://gist.github.com/0xcuriousapple/f68f63ab25f463f8f9fb5759209ab497) |
 | 🔥 High | Thirdweb | Independent Bug Bounty | [View Details](https://gist.github.com/0xcuriousapple/a47472a1107384cf5db1470dc8a6d2cb) |
@@ -70,6 +70,12 @@ Apprentice (2 mo) > Associate (7 mo) > Lead (3 mo)
 | ⚡ Medium | Raft | Hats | [View Details](https://gist.github.com/0xcuriousapple/ce1f4150674f2559e375b401a02dc776) |
 | ⚡ Medium | Spiral DAO | Hats | [View Details](https://gist.github.com/0xcuriousapple/5b48f9d8072b15cd5b0c5371398df0f3) |
 
+
+
+***  _The payout wasn't offered in this case as they argued that no funds were at risk at the time due to low traction for these features._ 
+_However, these features were publicly available, declared safe and audited, in production, and announced as a major release on their socials._
+_This argument is completely flawed—if you announce something in production, you're liable for it._ 
+_There should have been at least a minimum critical payout, but since they had no official bug bounty program, there was no other option._
 
 ## Publications 📑:
 1. [ERC1271 Replay - 15+ Teams Affected](https://mirror.xyz/curiousapple.eth/pFqAdW2LiJ-6S4sg_u1z08k4vK6BCJ33LcyXpnNb8yU)
