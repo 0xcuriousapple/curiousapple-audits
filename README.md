@@ -1,11 +1,13 @@
 # curiousapple 🦇
-### Independent Security Researcher
----------------------------
-**Bridges, DEXs, Perps, Vaults, Lending Markets, Stablecoins, LSDs,** </br>
-**NFT Market Places, NFT Drops, DAOs, Social, Games, Smart Accounts....**</br>
-Have audited all !!! &nbsp; :earth_asia: :earth_africa: :earth_americas: </br>
-If your protocol does not belong there, bring it on ! will take it as challenge :smile: </br>
-Ping me at `curiousapple` on telegram or discord to take it forward :airplane: </br></br>
+## Lead Security Researcher @ [Guardian](https://guardianaudits.com/)
+
+
+| Client | Report | Duration |
+|--------|--------|----------|
+| Synthetix Treasury Market |   | 1 week |
+| GMX Multichain |   |3 weeks |
+
+
 
 ##  Previosuly as [Macro's](https://0xmacro.com/) Auditor 
  
