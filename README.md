@@ -1,4 +1,6 @@
 # curiousapple 🦇
+apple a day keeps hacker away
+
 ## Lead Security Researcher @ [Guardian](https://guardianaudits.com/)
 
 
@@ -41,7 +43,7 @@ Apprentice (2 mo) > Associate (7 mo) > Lead (3 mo)
 3. **Third** Position for [Socket Messaging Bridge (1H, 1M, 1L)](https://sockettech.notion.site/WarRoom-Leaderboard-47a977c54ff74fd48eac780a9d518c70) </br>
     Currently serving as their in-house security expert
 
-## Private Audits :seedling:
+## Independent Solo Audits :seedling:
 
 | Client               | Report   |   
 |-------------         |--------  |  
