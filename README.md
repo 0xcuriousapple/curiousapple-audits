@@ -51,19 +51,21 @@ Apprentice (2 mo) > Associate (7 mo) > Lead (3 mo)
 
 ## Bug Bounties :santa:
 
-1. Critical - [Thirdweb](https://gist.github.com/0xcuriousapple/e3df31decac16d3859349b4247a3e50c)
-2. Critical - Will Reveal soon
-3. High - [Cow](https://gist.github.com/0xcuriousapple/f68f63ab25f463f8f9fb5759209ab497) 
-4. High/Medium - [Ambire](https://gist.github.com/0xcuriousapple/6e45a013b1a4878c584941f2958c19bc), [ERC1271 Issue, 15+ Teams affected](https://mirror.xyz/curiousapple.eth/pFqAdW2LiJ-6S4sg_u1z08k4vK6BCJ33LcyXpnNb8yU)
-5. High - [Thirdweb](https://gist.github.com/0xcuriousapple/a47472a1107384cf5db1470dc8a6d2cb)
-6. High - Reported in Jan, TBA
-7. High - [Connext](https://gist.github.com/0xcuriousapple/5a624d56d95c49b2a18f9ed64f070376)
-8. Medium - Reported in Feb, TBA
-9. Medium - [Raft](https://gist.github.com/0xcuriousapple/ce1f4150674f2559e375b401a02dc776)
-10. Medium - [Spiral DAO](https://gist.github.com/0xcuriousapple/5b48f9d8072b15cd5b0c5371398df0f3)
-11. Medium - Will reveal soon (1 month)
+| Severity | Project | Type | Report |
+|----------|---------|------|--------|
+| 🏆 Critical | Thirdweb | Independent Bug Bounty | [View Details](https://gist.github.com/0xcuriousapple/e3df31decac16d3859349b4247a3e50c) |
+| 🏆 Critical | Rhinestone | Independent Bug Bounty | [View Details](https://gist.github.com/0xcuriousapple/d7128a1d8ee342e21e8cea3350687566) |
+| 🔥 High | Rhinestone | Independent Bug Bounty | [View Details](https://gist.github.com/0xcuriousapple/6c099551fc45274c20f7fb773ad5f2a0) |
+| 🔥 High | Cow | Immunefi | [View Details](https://gist.github.com/0xcuriousapple/f68f63ab25f463f8f9fb5759209ab497) |
+| 🔥 High | Thirdweb | Independent Bug Bounty | [View Details](https://gist.github.com/0xcuriousapple/a47472a1107384cf5db1470dc8a6d2cb) |
+| 🔥 High | Bridge Protocol | Independent Bug Bounty | Not Permitted to Disclose for some reason 🤷 |
+| 🔥 High | Bridge Protocol | Independent Bug Bounty | Not Permitted to Disclose for some reason 🤷 |
+| 🔥 High | Connext | Immunefi | [View Details](https://gist.github.com/0xcuriousapple/5a624d56d95c49b2a18f9ed64f070376) |
+| 📌 High/Medium | Ambire | Independent Bug Bounty & Immunefi | [View Details](https://gist.github.com/0xcuriousapple/6e45a013b1a4878c584941f2958c19bc) |
+| 📌 High/Medium | ERC1271 Issue (15+ Teams Affected) | Independent Bug Bounty & Immunefi | [View Details](https://mirror.xyz/curiousapple.eth/pFqAdW2LiJ-6S4sg_u1z08k4vK6BCJ33LcyXpnNb8yU) |
+| ⚡ Medium | Raft | Hats | [View Details](https://gist.github.com/0xcuriousapple/ce1f4150674f2559e375b401a02dc776) |
+| ⚡ Medium | Spiral DAO | Hats | [View Details](https://gist.github.com/0xcuriousapple/5b48f9d8072b15cd5b0c5371398df0f3) |
 
-Bunch of lows 
 
 ## Publications 📑:
 1. [ERC1271 Replay - 15+ Teams Affected](https://mirror.xyz/curiousapple.eth/pFqAdW2LiJ-6S4sg_u1z08k4vK6BCJ33LcyXpnNb8yU)
