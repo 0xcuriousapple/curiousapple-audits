@@ -74,7 +74,6 @@ Apprentice (2 mo) > Associate (7 mo) > Lead (3 mo)
 
 ***  _The payout wasn't offered in this case as they argued that no funds were at risk at the time due to low traction for these features._ 
 _However, these features were publicly available, declared safe and audited, in production, and announced as a major release on their socials._
-_This argument is completely flawed—if you announce something in production, you're liable for it._ 
 _There should have been at least a minimum critical payout, but since they had no official bug bounty program, there was no other option._
 
 ## Publications 📑:
