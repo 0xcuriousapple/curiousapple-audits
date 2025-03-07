@@ -40,7 +40,8 @@ Apprentice (2 mo) > Associate (7 mo) > Lead (3 mo)
 
 1. **First** Position for [Raft Finance (1H, 1M, 3L, 1G)](https://github.com/raft-fi/contracts/issues?q=is%3Aissue+is%3Aclosed+author%3Aabhishekvispute)
 2. **First** Position for [VMEX Finance (1H, 1L)](https://github.com/hats-finance/VMEX-0x050183b53cf62bcd6c2a932632f8156953fd146f/issues/24) </br>
-3. **Third** Position for [Socket Messaging Bridge (1H, 1M, 1L)](https://sockettech.notion.site/WarRoom-Leaderboard-47a977c54ff74fd48eac780a9d518c70) </br>
+3  **First** Position for [Reserve Protocol (2M)](https://cantina.xyz/competitions/9dfca0bc-a7bf-482e-a3df-4eb861f55c4f/leaderboard) </br>
+4. **Third** Position for [Socket Messaging Bridge (1H, 1M, 1L)](https://sockettech.notion.site/WarRoom-Leaderboard-47a977c54ff74fd48eac780a9d518c70) </br>
     Currently serving as their in-house security expert
 
 ## Independent Solo Audits :seedling:
