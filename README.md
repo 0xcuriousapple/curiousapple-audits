@@ -7,8 +7,9 @@ apple a day keeps hacker away
 | Client | Report | Duration |
 |--------|--------|----------|
 | Synthetix Treasury Market |   | 1 week |
-| GMX Multichain |   |3 weeks |
-
+| GMX Crosschain |   |3 weeks |
+| GMX Gasless Updates (Sponsored Call) |   |1.5 weeks |
+| Polynomial Short Review |   |0.5 week |
 
 
 ##  Previosuly as [Macro's](https://0xmacro.com/) Auditor 
