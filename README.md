@@ -12,9 +12,9 @@ apple a day keeps hacker away
 | Polynomial Short Review |   |0.5 week |
 
 
-##  Previosuly as [Macro's](https://0xmacro.com/) Auditor 
+##  Previosuly at [Macro's](https://0xmacro.com/) 
  
-Apprentice (2 mo) > Associate (7 mo) > Lead (3 mo) 
+**Lead (3 mo) - Associate (7 mo) - Apprentice (2 mo) ** 
 
 | Client      | Report                                                                                       | Position            | Duration |
 |-------------|----------------------------------------------------------------------------------------------|---------------------|----------|
