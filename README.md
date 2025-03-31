@@ -1,5 +1,5 @@
 # curiousapple 🦇
-apple a day keeps hacker away
+apple a day keeps hacker away 🍏
 
 ## Lead Security Researcher @ [Guardian](https://guardianaudits.com/)
 
@@ -14,7 +14,7 @@ apple a day keeps hacker away
 
 ##  Previosuly at [0xMacro](https://0xmacro.com/) 
  
-**Lead (3 mo) - Associate (7 mo) - Apprentice (2 mo) ** 
+**Lead (3 mo) - Associate (7 mo) - Apprentice (2 mo)** 
 
 | Client      | Report                                                                                       | Position            | Duration |
 |-------------|----------------------------------------------------------------------------------------------|---------------------|----------|
