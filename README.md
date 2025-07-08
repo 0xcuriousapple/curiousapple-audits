@@ -14,7 +14,7 @@ Here's your formatted table for a README file (in Markdown syntax), clean and co
 | Polynomial Short Review             |                               | 0.5 week  |
 | GMX Crosschain - 2                  |                               | 1.5 weeks |
 | GMX Gasless Updates (OneBalance)    |                               | 1 week    |
-| xxxx Attester                       |                               | 0.5 week  |
+| ____ Attester                       |                               | 0.5 week  |
 | Synthetix Autocompound Vault        |                               | 1.5 weeks |
 | USDT0 Polygon Upgrade               |                               | 1 week    |
 | USDT0 Onesig                        |                               | 0.5 week  |
@@ -23,7 +23,7 @@ Here's your formatted table for a README file (in Markdown syntax), clean and co
 | GMX Crosschain - 4                  |                               | 1 week    |
 | Push Token Migration                |                               | 1 day     |
 | M0 _____                            |                               | 1 week    |
-| Aria ____                           |                               | 1 week    |
+| A__a ____                           |                               | 1 week    |
 
 
 Let me know if you want to add report links or collapse this into a summary view.
