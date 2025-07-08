@@ -3,9 +3,6 @@ apple a day keeps hacker away 🍏
 
 ## Lead Security Researcher @ [Guardian](https://guardianaudits.com/)
 
-Here's your formatted table for a README file (in Markdown syntax), clean and consistent:
-
-
 | Client                              | Report                        | Duration  |
 |-------------------------------------|-------------------------------|-----------|
 | Synthetix Treasury Market           |                               | 1 week    |
@@ -24,10 +21,6 @@ Here's your formatted table for a README file (in Markdown syntax), clean and co
 | Push Token Migration                |                               | 1 day     |
 | M0 _____                            |                               | 1 week    |
 | A__a ____                           |                               | 1 week    |
-
-
-Let me know if you want to add report links or collapse this into a summary view.
-
 
 
 ##  Previosuly at [0xMacro](https://0xmacro.com/) 
