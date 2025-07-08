@@ -3,13 +3,31 @@ apple a day keeps hacker away 🍏
 
 ## Lead Security Researcher @ [Guardian](https://guardianaudits.com/)
 
+Here's your formatted table for a README file (in Markdown syntax), clean and consistent:
 
-| Client | Report | Duration |
-|--------|--------|----------|
-| Synthetix Treasury Market |   | 1 week |
-| GMX Crosschain |   |3 weeks |
-| GMX Gasless Updates (Sponsored Call) |   |1.5 weeks |
-| Polynomial Short Review |   |0.5 week |
+
+| Client                              | Report                        | Duration  |
+|-------------------------------------|-------------------------------|-----------|
+| Synthetix Treasury Market           |                               | 1 week    |
+| GMX Crosschain - 1                  |                               | 3 weeks   |
+| GMX Gasless Updates (Sponsored Call)|                               | 1.5 weeks |
+| Polynomial Short Review             |                               | 0.5 week  |
+| GMX Crosschain - 2                  |                               | 1.5 weeks |
+| GMX Gasless Updates (OneBalance)    |                               | 1 week    |
+| xxxx Attester                       |                               | 0.5 week  |
+| Synthetix Autocompound Vault        |                               | 1.5 weeks |
+| USDT0 Polygon Upgrade               |                               | 1 week    |
+| USDT0 Onesig                        |                               | 0.5 week  |
+| GMX Crosschain - 3                  |                               | 1 week    |
+| M0 Uniswap Hooks                    |                               | 0.5 week  |
+| GMX Crosschain - 4                  |                               | 1 week    |
+| Push Token Migration                |                               | 1 day     |
+| M0 _____                            |                               | 1 week    |
+| Aria ____                           |                               | 1 week    |
+
+
+Let me know if you want to add report links or collapse this into a summary view.
+
 
 
 ##  Previosuly at [0xMacro](https://0xmacro.com/) 
