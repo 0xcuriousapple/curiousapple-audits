@@ -3,50 +3,58 @@ apple a day keeps hacker away 🍏
 
 ## Lead Security Researcher @ [Guardian](https://guardianaudits.com/)
 
-| Client                              | Report                        | Duration  |
-|-------------------------------------|-------------------------------|-----------|
-| Synthetix Treasury Market           |                               | 1 week    |
-| GMX Crosschain - 1                  |                               | 3 weeks   |
-| GMX Gasless Updates (Sponsored Call)|                               | 1.5 weeks |
-| Polynomial Short Review             |                               | 0.5 week  |
-| GMX Crosschain - 2                  |                               | 1.5 weeks |
-| GMX Gasless Updates (OneBalance)    |                               | 1 week    |
-| ____ Attester                       |                               | 0.5 week  |
-| Synthetix Autocompound Vault        |                               | 1.5 weeks |
-| USDT0 Polygon Upgrade               |                               | 1 week    |
-| USDT0 Onesig                        |                               | 0.5 week  |
-| GMX Crosschain - 3                  |                               | 1 week    |
-| M0 Uniswap Hooks                    |                               | 0.5 week  |
-| GMX Crosschain - 4                  |                               | 1 week    |
-| Push Token Migration                |                               | 1 day     |
-| M0 _____                            |                               | 1 week    |
-| A__a ____                           |                               | 1 week    |
+| Client                              | Report | Protocol Type |
+|-------------------------------------|--------|---------------|
+| Synthetix Treasury Market           |        | `derivatives` `synthetic-assets` <!-- Duration: 1 week --> |
+| GMX Crosschain - 1                  |        | `derivatives` `perps` `crosschain` <!-- Duration: 3 weeks --> |
+| GMX Gasless Updates (Sponsored Call)|        | `relayers` `account-abstraction` <!-- Duration: 1.5 weeks --> |
+| Polynomial Short Review             |        | `derivatives` <!-- Duration: 0.5 week --> |
+| GMX Crosschain - 2                  |        | `derivatives` `perps` `crosschain`<!-- Duration: 1.5 weeks --> |
+| GMX Gasless Updates (OneBalance)    |        | `relayers` `account-abstraction` <!-- Duration: 1 week --> |
+| ____ Attester                       |        | `evm-attestation` <!-- Duration: 0.5 week --> |
+| Synthetix Autocompound Vault        |        | `staking` `vault` <!-- Duration: 1.5 weeks --> |
+| USDT0 Polygon Upgrade               |        | `stablecoin` `crosschain` <!-- Duration: 1 week --> |
+| USDT0 Onesig                        |        | `stablecoin` `crosschain` <!-- Duration: 0.5 week --> |
+| GMX Crosschain - 3                  |        | `derivatives` `perps` `crosschain` <!-- Duration: 1 week --> |
+| M0 Uniswap Hooks                    |        | `amm` <!-- Duration: 0.5 week --> |
+| GMX Crosschain - 4                  |        | `derivatives` `perps` `crosschain` <!-- Duration: 1 week --> |
+| Push Token Migration                |        | `erc20` `crosschain` <!-- Duration: 1 day --> |
+| M0 EVM Extensions                   |        | `stablecoin` <!-- Duration: 1 week --> |
+| A__a ____                           |        | `staking` `vault` <!-- Duration: 1 week --> |
+| Gamma ____ ____ Manager             |        | `amm` <!-- Duration: 1.5 weeks --> |
+| ___ Staking                         |        | `staking` `vault` <!-- Duration: 0.2 week --> |
+| USDT Polygon Upgrade Part 2         |        | `stablecoin` `crosschain` <!-- Duration: 0.5 week --> |
+
+---
+
+## Previously at [0xMacro](https://0xmacro.com/)
+
+**Lead (3 mo) – Associate (7 mo) – Apprentice (2 mo)**
+
+| Client      | Report | Protocol Type |
+|-------------|--------|---------------|
+| Connext     | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/Connext.pdf) | `crosschain` `bridge` | <!-- Position: Associate + Point | Duration: 6 weeks --> |
+| Fuji        | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/Fuji.pdf) | `lending` `crosschain` | <!-- Position: Lead (Solo Auditor) | Duration: 4 weeks --> |
+| PartyDAO-2  | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/PartyDAO-2.pdf) | `nft` `dao` `governance` | <!-- Position: Lead | Duration: 2 weeks --> |
+| NFT-Hashi   | Private | `nft` `crosschain` | <!-- Position: Lead | Duration: 0.5 week --> |
+| Kwenta      | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/Kwenta.pdf) | `perps` `account-abstraction` | <!-- Position: Associate | Duration: 2 weeks --> |
+| TreasureDAO | Private | `game` | <!-- Position: Associate | Duration: 4 weeks --> |
+| Sommelier-1 | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/Sommelier-1.pdf) | `staking` `vault` | <!-- Position: Associate | Duration: 2 weeks --> |
+| Sommelier-2 | Private | `staking` `vault` | <!-- Position: Associate + Point | Duration: 3 weeks --> |
+| Sommelier-3 | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/Sommelier-3.pdf) | `staking` `vault` | <!-- Position: Associate | Duration: 3 weeks --> |
+| PartyDAO-1  | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/PartyDAO-1.pdf) | `nft` `dao` `governance` | <!-- Position: Associate | Duration: 4 weeks --> |
+| Zion        | Private | `social` | <!-- Position: Associate + Point | Duration: 2 weeks --> |
+| Makerdao    | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/Maker.pdf) | `lending` `stablecoin` | <!-- Position: Associate | Duration: 1 week --> |
+| Synthetix   | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/Synthetix.pdf) | `derivatives` `synthetic-assets` | <!-- Position: Associate | Duration: 1 week --> |
+| Hop         | Private | `crosschain` `bridge` | <!-- Position: Associate | Duration: 0.5 week --> |
+| xDonations  | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/xDonations.pdf) | `donations` `crosschain` | <!-- Position: Associate | Duration: 0.5 week --> |
+| Thirdweb    | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/thirdweb.pdf) | `library` | <!-- Position: Associate + Point | Duration: 2 weeks --> |
+| Frax TWAMM  | Private | `amm` | <!-- Position: Apprentice | Duration: 2 weeks --> |
+| Wristables  | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/Wristables.pdf) | `nft` | <!-- Position: Apprentice | Duration: 1 week --> |
 
 
-##  Previosuly at [0xMacro](https://0xmacro.com/) 
- 
-**Lead (3 mo) - Associate (7 mo) - Apprentice (2 mo)** 
 
-| Client      | Report                                                                                       | Position            | Duration |
-|-------------|----------------------------------------------------------------------------------------------|---------------------|----------|
-| Connext     | [Open]( https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/Connext.pdf )   | Associate + Point   | 6 weeks  |
-| Fuji        | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/Fuji.pdf)        | Lead (Solo Auditor) | 4 weeks  |
-| PartyDAO-2  | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/PartyDAO-2.pdf)  | Lead                | 2 weeks  |
-| NFT-Hashi   | Private                                                                                      | Lead                | 0.5 week |
-| Kwenta      | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/Kwenta.pdf)      | Associate           | 2 weeks  |
-| TreasureDAO | Private                                                                                      | Associate           | 4 weeks  |
-| Sommelier-1 | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/Sommelier-1.pdf) | Associate           | 2 weeks  |
-| Sommelier-2 | Private                                                                                      | Associate + Point   | 3 weeks  |
-| Sommelier-3 | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/Sommelier-3.pdf) | Associate           | 3 weeks  |
-| PartyDAO-1  | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/PartyDAO-1.pdf)  | Associate           | 4 weeks  |
-| Zion        | Private                                                                                      | Associate + Point   | 2 weeks  |
-| Makerdao    | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/Maker.pdf)       | Associate           | 1 week   |
-| Synthetix   | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/Synthetix.pdf)   | Associate           | 1 week   |
-| Hop         | Private                                                                                      | Associate           | 0.5 week |
-| xDonations  | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/xDonations.pdf)  | Associate           | 0.5 week |
-| Thirdweb    | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/thirdweb.pdf)    | Associate + Point   | 2 weeks  |
-| Frax TWAMM  | Private                                                                                      | Apprentice          | 2 weeks  |
-| Wristables  | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/Wristables.pdf)  | Apprentice          | 1 week   |
+
 
 ##  Public Audit Contests (Big Wins) :medal_military:
 
