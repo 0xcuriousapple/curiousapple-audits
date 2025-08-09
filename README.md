@@ -5,52 +5,52 @@ apple a day keeps hacker away 🍏
 
 | Client                              | Report | Protocol Type |
 |-------------------------------------|--------|---------------|
-| Synthetix Treasury Market           |        | `derivatives` `synthetic-assets` <!-- Duration: 1 week --> |
-| GMX Crosschain - 1                  |        | `derivatives` `perps` `crosschain` <!-- Duration: 3 weeks --> |
-| GMX Gasless Updates (Sponsored Call)|        | `relayers` `account-abstraction` <!-- Duration: 1.5 weeks --> |
-| Polynomial Short Review             |        | `derivatives` <!-- Duration: 0.5 week --> |
-| GMX Crosschain - 2                  |        | `derivatives` `perps` `crosschain`<!-- Duration: 1.5 weeks --> |
-| GMX Gasless Updates (OneBalance)    |        | `relayers` `account-abstraction` <!-- Duration: 1 week --> |
-| ____ Attester                       |        | `evm-attestation` <!-- Duration: 0.5 week --> |
-| Synthetix Autocompound Vault        |        | `staking` `vault` <!-- Duration: 1.5 weeks --> |
-| USDT0 Polygon Upgrade               |        | `stablecoin` `crosschain` <!-- Duration: 1 week --> |
-| USDT0 Onesig                        |        | `stablecoin` `crosschain` <!-- Duration: 0.5 week --> |
-| GMX Crosschain - 3                  |        | `derivatives` `perps` `crosschain` <!-- Duration: 1 week --> |
-| M0 Uniswap Hooks                    |        | `amm` <!-- Duration: 0.5 week --> |
-| GMX Crosschain - 4                  |        | `derivatives` `perps` `crosschain` <!-- Duration: 1 week --> |
-| Push Token Migration                |        | `erc20` `crosschain` <!-- Duration: 1 day --> |
-| M0 EVM Extensions                   |        | `stablecoin` <!-- Duration: 1 week --> |
-| A__a ____                           |        | `staking` `vault` <!-- Duration: 1 week --> |
-| Gamma ____ ____ Manager             |        | `amm` <!-- Duration: 1.5 weeks --> |
-| ___ Staking                         |        | `staking` `vault` <!-- Duration: 0.2 week --> |
-| USDT Polygon Upgrade Part 2         |        | `stablecoin` `crosschain` <!-- Duration: 0.5 week --> |
+| Synthetix Treasury Market           |        | ![](https://img.shields.io/badge/derivatives-0E8A16.svg?style=flat-square) ![](https://img.shields.io/badge/synthetic--assets-00B3A4.svg?style=flat-square) | <!-- Duration: 1 week --> |
+| GMX Crosschain - 1                  |        | ![](https://img.shields.io/badge/crosschain-7957D5.svg?style=flat-square) ![](https://img.shields.io/badge/derivatives-0E8A16.svg?style=flat-square) ![](https://img.shields.io/badge/perps-1F6FEB.svg?style=flat-square) | <!-- Duration: 3 weeks --> |
+| GMX Gasless Updates (Sponsored Call)|        | ![](https://img.shields.io/badge/account--abstraction-FF8C00.svg?style=flat-square) ![](https://img.shields.io/badge/relayers-6A737D.svg?style=flat-square) | <!-- Duration: 1.5 weeks --> |
+| Polynomial Short Review             |        | ![](https://img.shields.io/badge/derivatives-0E8A16.svg?style=flat-square) | <!-- Duration: 0.5 week --> |
+| GMX Crosschain - 2                  |        | ![](https://img.shields.io/badge/crosschain-7957D5.svg?style=flat-square) ![](https://img.shields.io/badge/derivatives-0E8A16.svg?style=flat-square) ![](https://img.shields.io/badge/perps-1F6FEB.svg?style=flat-square) | <!-- Duration: 1.5 weeks --> |
+| GMX Gasless Updates (OneBalance)    |        | ![](https://img.shields.io/badge/account--abstraction-FF8C00.svg?style=flat-square) ![](https://img.shields.io/badge/relayers-6A737D.svg?style=flat-square) | <!-- Duration: 1 week --> |
+| ____ Attester                       |        | ![](https://img.shields.io/badge/evm--attestation-A371F7.svg?style=flat-square) | <!-- Duration: 0.5 week --> |
+| Synthetix Autocompound Vault        |        | ![](https://img.shields.io/badge/staking-F66A0A.svg?style=flat-square) ![](https://img.shields.io/badge/vault-F66A0A.svg?style=flat-square) | <!-- Duration: 1.5 weeks --> |
+| USDT0 Polygon Upgrade               |        | ![](https://img.shields.io/badge/crosschain-7957D5.svg?style=flat-square) ![](https://img.shields.io/badge/stablecoin-2EA043.svg?style=flat-square) | <!-- Duration: 1 week --> |
+| USDT0 Onesig                        |        | ![](https://img.shields.io/badge/crosschain-7957D5.svg?style=flat-square) ![](https://img.shields.io/badge/stablecoin-2EA043.svg?style=flat-square) | <!-- Duration: 0.5 week --> |
+| GMX Crosschain - 3                  |        | ![](https://img.shields.io/badge/crosschain-7957D5.svg?style=flat-square) ![](https://img.shields.io/badge/derivatives-0E8A16.svg?style=flat-square) ![](https://img.shields.io/badge/perps-1F6FEB.svg?style=flat-square) | <!-- Duration: 1 week --> |
+| M0 Uniswap Hooks                    |        | ![](https://img.shields.io/badge/amm-DB61A2.svg?style=flat-square) | <!-- Duration: 0.5 week --> |
+| GMX Crosschain - 4                  |        | ![](https://img.shields.io/badge/crosschain-7957D5.svg?style=flat-square) ![](https://img.shields.io/badge/derivatives-0E8A16.svg?style=flat-square) ![](https://img.shields.io/badge/perps-1F6FEB.svg?style=flat-square) | <!-- Duration: 1 week --> |
+| Push Token Migration                |        | ![](https://img.shields.io/badge/crosschain-7957D5.svg?style=flat-square) ![](https://img.shields.io/badge/erc20-0969DA.svg?style=flat-square) | <!-- Duration: 1 day --> |
+| M0 EVM Extensions                   |        | ![](https://img.shields.io/badge/stablecoin-2EA043.svg?style=flat-square) | <!-- Duration: 1 week --> |
+| A__a ____                           |        | ![](https://img.shields.io/badge/staking-F66A0A.svg?style=flat-square) ![](https://img.shields.io/badge/vault-F66A0A.svg?style=flat-square) | <!-- Duration: 1 week --> |
+| Gamma ____ ____ Manager             |        | ![](https://img.shields.io/badge/amm-DB61A2.svg?style=flat-square) | <!-- Duration: 1.5 weeks --> |
+| ___ Staking                         |        | ![](https://img.shields.io/badge/staking-F66A0A.svg?style=flat-square) ![](https://img.shields.io/badge/vault-F66A0A.svg?style=flat-square) | <!-- Duration: 0.2 week --> |
+| USDT Polygon Upgrade Part 2         |        | ![](https://img.shields.io/badge/crosschain-7957D5.svg?style=flat-square) ![](https://img.shields.io/badge/stablecoin-2EA043.svg?style=flat-square) | <!-- Duration: 0.5 week --> |
 
----
+
 
 ## Previously at [0xMacro](https://0xmacro.com/)
-
-**Lead (3 mo) – Associate (7 mo) – Apprentice (2 mo)**
+*Lead (3 mo) – Associate (7 mo) – Apprentice (2 mo)*
 
 | Client      | Report | Protocol Type |
 |-------------|--------|---------------|
-| Connext     | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/Connext.pdf) | `crosschain` `bridge` | <!-- Position: Associate + Point | Duration: 6 weeks --> |
-| Fuji        | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/Fuji.pdf) | `lending` `crosschain` | <!-- Position: Lead (Solo Auditor) | Duration: 4 weeks --> |
-| PartyDAO-2  | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/PartyDAO-2.pdf) | `nft` `dao` `governance` | <!-- Position: Lead | Duration: 2 weeks --> |
-| NFT-Hashi   | Private | `nft` `crosschain` | <!-- Position: Lead | Duration: 0.5 week --> |
-| Kwenta      | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/Kwenta.pdf) | `perps` `account-abstraction` | <!-- Position: Associate | Duration: 2 weeks --> |
-| TreasureDAO | Private | `game` | <!-- Position: Associate | Duration: 4 weeks --> |
-| Sommelier-1 | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/Sommelier-1.pdf) | `staking` `vault` | <!-- Position: Associate | Duration: 2 weeks --> |
-| Sommelier-2 | Private | `staking` `vault` | <!-- Position: Associate + Point | Duration: 3 weeks --> |
-| Sommelier-3 | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/Sommelier-3.pdf) | `staking` `vault` | <!-- Position: Associate | Duration: 3 weeks --> |
-| PartyDAO-1  | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/PartyDAO-1.pdf) | `nft` `dao` `governance` | <!-- Position: Associate | Duration: 4 weeks --> |
-| Zion        | Private | `social` | <!-- Position: Associate + Point | Duration: 2 weeks --> |
-| Makerdao    | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/Maker.pdf) | `lending` `stablecoin` | <!-- Position: Associate | Duration: 1 week --> |
-| Synthetix   | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/Synthetix.pdf) | `derivatives` `synthetic-assets` | <!-- Position: Associate | Duration: 1 week --> |
-| Hop         | Private | `crosschain` `bridge` | <!-- Position: Associate | Duration: 0.5 week --> |
-| xDonations  | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/xDonations.pdf) | `donations` `crosschain` | <!-- Position: Associate | Duration: 0.5 week --> |
-| Thirdweb    | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/thirdweb.pdf) | `library` | <!-- Position: Associate + Point | Duration: 2 weeks --> |
-| Frax TWAMM  | Private | `amm` | <!-- Position: Apprentice | Duration: 2 weeks --> |
-| Wristables  | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/Wristables.pdf) | `nft` | <!-- Position: Apprentice | Duration: 1 week --> |
+| Connext     | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/Connext.pdf) | ![](https://img.shields.io/badge/bridge-0969DA.svg?style=flat-square) ![](https://img.shields.io/badge/crosschain-7957D5.svg?style=flat-square) | <!-- Position: Associate + Point | Duration: 6 weeks --> |
+| Fuji        | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/Fuji.pdf) | ![](https://img.shields.io/badge/crosschain-7957D5.svg?style=flat-square) ![](https://img.shields.io/badge/lending-34D058.svg?style=flat-square) | <!-- Position: Lead (Solo Auditor) | Duration: 4 weeks --> |
+| PartyDAO-2  | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/PartyDAO-2.pdf) | ![](https://img.shields.io/badge/dao-8250DF.svg?style=flat-square) ![](https://img.shields.io/badge/governance-6F42C1.svg?style=flat-square) ![](https://img.shields.io/badge/nft-111111.svg?style=flat-square) | <!-- Position: Lead | Duration: 2 weeks --> |
+| NFT-Hashi   | Private | ![](https://img.shields.io/badge/crosschain-7957D5.svg?style=flat-square) ![](https://img.shields.io/badge/nft-111111.svg?style=flat-square) | <!-- Position: Lead | Duration: 0.5 week --> |
+| Kwenta      | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/Kwenta.pdf) | ![](https://img.shields.io/badge/account--abstraction-FF8C00.svg?style=flat-square) ![](https://img.shields.io/badge/perps-1F6FEB.svg?style=flat-square) | <!-- Position: Associate | Duration: 2 weeks --> |
+| TreasureDAO | Private | ![](https://img.shields.io/badge/game-F97583.svg?style=flat-square) | <!-- Position: Associate | Duration: 4 weeks --> |
+| Sommelier-1 | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/Sommelier-1.pdf) | ![](https://img.shields.io/badge/staking-F66A0A.svg?style=flat-square) ![](https://img.shields.io/badge/vault-F66A0A.svg?style=flat-square) | <!-- Position: Associate | Duration: 2 weeks --> |
+| Sommelier-2 | Private | ![](https://img.shields.io/badge/staking-F66A0A.svg?style=flat-square) ![](https://img.shields.io/badge/vault-F66A0A.svg?style=flat-square) | <!-- Position: Associate + Point | Duration: 3 weeks --> |
+| Sommelier-3 | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/Sommelier-3.pdf) | ![](https://img.shields.io/badge/staking-F66A0A.svg?style=flat-square) ![](https://img.shields.io/badge/vault-F66A0A.svg?style=flat-square) | <!-- Position: Associate | Duration: 3 weeks --> |
+| PartyDAO-1  | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/PartyDAO-1.pdf) | ![](https://img.shields.io/badge/dao-8250DF.svg?style=flat-square) ![](https://img.shields.io/badge/governance-6F42C1.svg?style=flat-square) ![](https://img.shields.io/badge/nft-111111.svg?style=flat-square) | <!-- Position: Associate | Duration: 4 weeks --> |
+| Zion        | Private | ![](https://img.shields.io/badge/social-D876E3.svg?style=flat-square) | <!-- Position: Associate + Point | Duration: 2 weeks --> |
+| Makerdao    | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/Maker.pdf) | ![](https://img.shields.io/badge/lending-34D058.svg?style=flat-square) ![](https://img.shields.io/badge/stablecoin-2EA043.svg?style=flat-square) | <!-- Position: Associate | Duration: 1 week --> |
+| Synthetix   | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/Synthetix.pdf) | ![](https://img.shields.io/badge/derivatives-0E8A16.svg?style=flat-square) ![](https://img.shields.io/badge/synthetic--assets-00B3A4.svg?style=flat-square) | <!-- Position: Associate | Duration: 1 week --> |
+| Hop         | Private | ![](https://img.shields.io/badge/bridge-0969DA.svg?style=flat-square) ![](https://img.shields.io/badge/crosschain-7957D5.svg?style=flat-square) | <!-- Position: Associate | Duration: 0.5 week --> |
+| xDonations  | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/xDonations.pdf) | ![](https://img.shields.io/badge/crosschain-7957D5.svg?style=flat-square) ![](https://img.shields.io/badge/donations-FBCA04.svg?style=flat-square) | <!-- Position: Associate | Duration: 0.5 week --> |
+| Thirdweb    | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/thirdweb.pdf) | ![](https://img.shields.io/badge/library-0366D6.svg?style=flat-square) | <!-- Position: Associate + Point | Duration: 2 weeks --> |
+| Frax TWAMM  | Private | ![](https://img.shields.io/badge/amm-DB61A2.svg?style=flat-square) | <!-- Position: Apprentice | Duration: 2 weeks --> |
+| Wristables  | [Open](https://github.com/0xcuriousapple/curiousapple-audits/blob/main/src/Wristables.pdf) | ![](https://img.shields.io/badge/nft-111111.svg?style=flat-square) | <!-- Position: Apprentice | Duration: 1 week --> |
+
 
 
 
