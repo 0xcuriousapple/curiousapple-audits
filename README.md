@@ -20,10 +20,21 @@ apple a day keeps hacker away 🍏
 | GMX Crosschain - 4                  |        | ![](https://img.shields.io/badge/crosschain-7957D5.svg?style=flat-square) ![](https://img.shields.io/badge/derivatives-0E8A16.svg?style=flat-square) ![](https://img.shields.io/badge/perps-1F6FEB.svg?style=flat-square) | <!-- Duration: 1 week --> |
 | Push Token Migration                |        | ![](https://img.shields.io/badge/crosschain-7957D5.svg?style=flat-square) ![](https://img.shields.io/badge/erc20-0969DA.svg?style=flat-square) | <!-- Duration: 1 day --> |
 | M0 EVM Extensions                   |        | ![](https://img.shields.io/badge/stablecoin-2EA043.svg?style=flat-square) | <!-- Duration: 1 week --> |
-| A__a ____                           |        | ![](https://img.shields.io/badge/staking-F66A0A.svg?style=flat-square) ![](https://img.shields.io/badge/vault-F66A0A.svg?style=flat-square) | <!-- Duration: 1 week --> |
-| Gamma ____ ____ Manager             |        | ![](https://img.shields.io/badge/amm-DB61A2.svg?style=flat-square) | <!-- Duration: 1.5 weeks --> |
-| ___ Staking                         |        | ![](https://img.shields.io/badge/staking-F66A0A.svg?style=flat-square) ![](https://img.shields.io/badge/vault-F66A0A.svg?style=flat-square) | <!-- Duration: 0.2 week --> |
+| Aria Staking                           |        | ![](https://img.shields.io/badge/staking-F66A0A.svg?style=flat-square) ![](https://img.shields.io/badge/vault-F66A0A.svg?style=flat-square) | <!-- Duration: 1 week --> |
+| Gamma Limit Order Manager             |        | ![](https://img.shields.io/badge/amm-DB61A2.svg?style=flat-square) | <!-- Duration: 1.5 weeks --> |
+| SNX Staking                         |        | ![](https://img.shields.io/badge/staking-F66A0A.svg?style=flat-square) ![](https://img.shields.io/badge/vault-F66A0A.svg?style=flat-square) | <!-- Duration: 0.2 week --> |
 | USDT Polygon Upgrade Part 2         |        | ![](https://img.shields.io/badge/crosschain-7957D5.svg?style=flat-square) ![](https://img.shields.io/badge/stablecoin-2EA043.svg?style=flat-square) | <!-- Duration: 0.5 week --> |
+| Olympus Convertible Deposits        |        | ![](https://img.shields.io/badge/staking-F66A0A.svg?style=flat-square) ![](https://img.shields.io/badge/bonds-6E7781.svg?style=flat-square) | <!-- Duration: 1.5 weeks --> |
+| MUSD MExtensions Update             |        | ![](https://img.shields.io/badge/stablecoin-2EA043.svg?style=flat-square) | <!-- Duration: 0.5 week --> |
+| GMX Fee Automation                  |        | ![](https://img.shields.io/badge/automation-8250DF.svg?style=flat-square) | <!-- Duration: 1 week --> |
+| USDT XLayer Deployment              |        | ![](https://img.shields.io/badge/deployment-0969DA.svg?style=flat-square) | <!-- Duration: 0.2 week --> |
+| GMX Fee Scripts                     |        | ![](https://img.shields.io/badge/automation-8250DF.svg?style=flat-square) | <!-- Duration: 1 week --> |
+| USDT0 Plasma Deployment             |        | ![](https://img.shields.io/badge/deployment-0969DA.svg?style=flat-square) | <!-- Duration: 0.2 week --> |
+| USDT0 Hedera OFT & Adapter          |        | ![](https://img.shields.io/badge/crosschain-7957D5.svg?style=flat-square) | <!-- Duration: 1 week --> |
+| Fastlane                            |        | ![](https://img.shields.io/badge/liquid--staking-1F6FEB.svg?style=flat-square) | <!-- Duration: 4.5 weeks --> |
+| Bigcoin                             |        | ![](https://img.shields.io/badge/game-DB61A2.svg?style=flat-square) ![](https://img.shields.io/badge/launchpad-6A737D.svg?style=flat-square) | <!-- Duration: 2 weeks --> |
+| USDT0 MegaETH Deployment            |        | ![](https://img.shields.io/badge/deployment-0969DA.svg?style=flat-square) | <!-- Duration: 0.2 week --> |
+| M0 Liquidity Delivery & Portals     |        | ![](https://img.shields.io/badge/orderbook-0E8A16.svg?style=flat-square) ![](https://img.shields.io/badge/crosschain-7957D5.svg?style=flat-square) | <!-- Duration: 3 weeks --> |
 
 
 
