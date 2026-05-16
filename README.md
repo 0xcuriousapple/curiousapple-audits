@@ -35,9 +35,16 @@ apple a day keeps hacker away 🍏
 | Bigcoin                             |        | ![](https://img.shields.io/badge/game-DB61A2.svg?style=flat-square) ![](https://img.shields.io/badge/launchpad-6A737D.svg?style=flat-square) | <!-- Duration: 2 weeks --> |
 | USDT0 MegaETH Deployment            |        | ![](https://img.shields.io/badge/deployment-0969DA.svg?style=flat-square) | <!-- Duration: 0.2 week --> |
 | M0 Liquidity Delivery & Portals     |        | ![](https://img.shields.io/badge/orderbook-0E8A16.svg?style=flat-square) ![](https://img.shields.io/badge/crosschain-7957D5.svg?style=flat-square) | <!-- Duration: 3 weeks --> |
-
-
-
+| Yuga Torch NFT                      |        | ![](https://img.shields.io/badge/nft-8250DF.svg?style=flat-square) | <!-- Duration: 0.5 week --> |
+| GMX V2 V2.2C V2.3                   |        | ![](https://img.shields.io/badge/derivatives-0E8A16.svg?style=flat-square) ![](https://img.shields.io/badge/perps-1F6FEB.svg?style=flat-square) | <!-- Duration: 7 weeks --> |
+| LayerZero XXXXXXX                   |        | ![](https://img.shields.io/badge/crosschain-7957D5.svg?style=flat-square) | <!-- Duration: 4 weeks --> |
+| M0 YYYYYY                           |        | ![](https://img.shields.io/badge/stablecoin-2EA043.svg?style=flat-square) | <!-- Duration: 2 weeks --> |
+| USDT0 Tempo Deployment              |        | ![](https://img.shields.io/badge/deployment-0969DA.svg?style=flat-square) | <!-- Duration: 0.2 week --> |
+| USDT0 Hedera Deployment             |        | ![](https://img.shields.io/badge/deployment-0969DA.svg?style=flat-square) | <!-- Duration: 0.2 week --> |
+| USDT0/XAUT0 Celo Deployment and Upgrade |    | ![](https://img.shields.io/badge/crosschain-7957D5.svg?style=flat-square) ![](https://img.shields.io/badge/stablecoin-2EA043.svg?style=flat-square) | <!-- Duration: 1 week --> |
+| USDT0 Conflux Tx Verification       |        | ![](https://img.shields.io/badge/deployment-0969DA.svg?style=flat-square) | <!-- Duration: 0.2 week --> |
+| USAT CELO Deployment and Tx Verification |    | ![](https://img.shields.io/badge/crosschain-7957D5.svg?style=flat-square) ![](https://img.shields.io/badge/stablecoin-2EA043.svg?style=flat-square) | <!-- Duration: 0.5 week --> |
+| Fastlane ZZZZZ                        |        | ![](https://img.shields.io/badge/liquid--staking-1F6FEB.svg?style=flat-square) | <!-- Duration: 2 weeks --> |
 ## Previously at [0xMacro](https://0xmacro.com/)
 *Lead (3 mo) – Associate (7 mo) – Apprentice (2 mo)*
 
