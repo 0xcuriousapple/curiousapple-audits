@@ -45,6 +45,9 @@ apple a day keeps hacker away 🍏
 | USDT0 Conflux Tx Verification       |        | ![](https://img.shields.io/badge/deployment-0969DA.svg?style=flat-square) | <!-- Duration: 0.2 week --> |
 | USAT CELO Deployment and Tx Verification |    | ![](https://img.shields.io/badge/crosschain-7957D5.svg?style=flat-square) ![](https://img.shields.io/badge/stablecoin-2EA043.svg?style=flat-square) | <!-- Duration: 0.5 week --> |
 | Fastlane ZZZZZ                        |        | ![](https://img.shields.io/badge/liquid--staking-1F6FEB.svg?style=flat-square) | <!-- Duration: 2 weeks --> |
+| Layerzero ZZZZZZ                      |        |  | <!-- Duration: 1 week --> |
+| Perpcity                              |        |  | <!-- Duration: 2 weeks --> |
+
 ## Previously at [0xMacro](https://0xmacro.com/)
 *Lead (3 mo) – Associate (7 mo) – Apprentice (2 mo)*
 
