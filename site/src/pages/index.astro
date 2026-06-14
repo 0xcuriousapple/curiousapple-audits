@@ -1,0 +1,287 @@
+---
+import Layout from "../components/Layout.astro";
+import Badge from "../components/Badge.astro";
+import {
+  guardian, macro, contests, solo, bounties, bountyFootnote, publications,
+  type Audit,
+} from "../data/audits";
+
+const totalEngagements = guardian.length + macro.length;
+
+const stats = [
+  { value: `${totalEngagements}+`, label: "Engagements" },
+  { value: "3×", label: "1st-place contests" },
+  { value: "5", label: "Critical / High bounties" },
+  { value: "2", label: "Firms (Guardian · 0xMacro)" },
+];
+
+const sev: Record<string, string> = {
+  Critical: "#ff5c5c",
+  High: "#ff9f43",
+  "High/Medium": "#f6c945",
+  Medium: "#f6c945",
+};
+
+// Renders the report cell for an engagement.
+function reportLabel(a: Audit) {
+  if (!a.report) return null;
+  if (a.report === "private") return { text: "Private", muted: true };
+  return { text: "Open", muted: false, href: a.report as string };
+}
+---
+
+<Layout>
+  <main class="mx-auto max-w-3xl px-5 py-16 sm:py-24">
+    <!-- Hero -->
+    <header class="mb-16">
+      <div class="flex items-center gap-3">
+        <span class="text-3xl">🦇</span>
+        <h1 class="font-mono text-2xl font-semibold tracking-tight">curiousapple</h1>
+        <button
+          id="theme-toggle"
+          type="button"
+          aria-label="Toggle theme"
+          class="ml-auto grid h-9 w-9 place-items-center rounded-lg border border-border text-muted transition-colors hover:text-text"
+        >
+          <span class="theme-icon text-sm">🌙</span>
+        </button>
+      </div>
+      <p class="mt-3 text-muted">an apple a day keeps the hacker away 🍏</p>
+      <p class="mt-6 max-w-xl text-[15px] leading-relaxed text-text/90">
+        Smart contract security researcher. Currently
+        <span class="text-accent">Lead Security Researcher</span> at
+        <a href="https://guardianaudits.com/" class="underline decoration-border underline-offset-4 hover:decoration-accent">Guardian</a>,
+        previously at <a href="https://0xmacro.com/" class="underline decoration-border underline-offset-4 hover:decoration-accent">0xMacro</a>.
+        Derivatives, cross-chain, stablecoins, account abstraction.
+      </p>
+
+      <div class="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-border bg-border sm:grid-cols-4">
+        {stats.map((s) => (
+          <div class="bg-surface px-4 py-4">
+            <div class="font-mono text-xl font-semibold text-accent">{s.value}</div>
+            <div class="mt-1 text-xs text-muted">{s.label}</div>
+          </div>
+        ))}
+      </div>
+
+      <nav class="mt-8 flex flex-wrap gap-x-5 gap-y-2 text-sm text-muted">
+        <a href="#guardian" class="hover:text-text">Guardian</a>
+        <a href="#macro" class="hover:text-text">0xMacro</a>
+        <a href="#contests" class="hover:text-text">Contests</a>
+        <a href="#solo" class="hover:text-text">Solo</a>
+        <a href="#bounties" class="hover:text-text">Bounties</a>
+        <a href="#writing" class="hover:text-text">Writing</a>
+      </nav>
+
+      <div id="filter-bar" class="mt-5 hidden items-center gap-2 text-sm">
+        <span class="text-muted">Filtering by</span>
+        <span id="filter-tag" class="font-mono text-accent"></span>
+        <button id="filter-clear" type="button" class="rounded border border-border px-2 py-0.5 text-xs text-muted hover:text-text">
+          clear ✕
+        </button>
+        <span id="filter-count" class="ml-1 text-xs text-muted"></span>
+      </div>
+    </header>
+
+    <!-- Guardian -->
+    <section id="guardian" class="mb-16 scroll-mt-8">
+      <div class="mb-5 flex items-baseline justify-between border-b border-border pb-2">
+        <h2 class="font-mono text-lg font-semibold">Lead Security Researcher · Guardian</h2>
+        <span class="text-xs text-muted">{guardian.length} engagements</span>
+      </div>
+      <ul class="divide-y divide-border">
+        {guardian.map((a) => (
+          <li class="flex flex-wrap items-center gap-x-3 gap-y-1.5 py-2.5" data-tags={a.tags.join(",")}>
+            <span class="min-w-0 flex-1 text-[15px]">{a.client}</span>
+            <span class="flex flex-wrap gap-1">{a.tags.map((t) => <Badge tag={t} />)}</span>
+            <span class="w-16 shrink-0 text-right font-mono text-xs text-muted">{a.duration}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <!-- 0xMacro -->
+    <section id="macro" class="mb-16 scroll-mt-8">
+      <div class="mb-1 flex items-baseline justify-between border-b border-border pb-2">
+        <h2 class="font-mono text-lg font-semibold">Previously · 0xMacro</h2>
+        <span class="text-xs text-muted">Lead → Associate → Apprentice</span>
+      </div>
+      <ul class="divide-y divide-border">
+        {macro.map((a) => {
+          const r = reportLabel(a);
+          return (
+            <li class="flex flex-wrap items-center gap-x-3 gap-y-1.5 py-2.5" data-tags={a.tags.join(",")}>
+              <span class="min-w-0 flex-1 text-[15px]">
+                {a.client}
+                {a.position && <span class="ml-2 text-xs text-muted">{a.position}</span>}
+              </span>
+              <span class="flex flex-wrap gap-1">{a.tags.map((t) => <Badge tag={t} />)}</span>
+              <span class="w-14 shrink-0 text-right">
+                {r?.href
+                  ? <a href={r.href} class="font-mono text-xs text-accent hover:underline">Open ↗</a>
+                  : r && <span class="font-mono text-xs text-muted">{r.text}</span>}
+              </span>
+            </li>
+          );
+        })}
+      </ul>
+    </section>
+
+    <!-- Contests -->
+    <section id="contests" class="mb-16 scroll-mt-8">
+      <h2 class="mb-5 border-b border-border pb-2 font-mono text-lg font-semibold">Public Contests · Big Wins 🏅</h2>
+      <ul class="space-y-3">
+        {contests.map((c) => (
+          <li class="rounded-lg border border-border bg-surface px-4 py-3">
+            <div class="flex items-center gap-3">
+              <span class="font-mono text-sm font-semibold text-accent">{c.place}</span>
+              <a href={c.href} class="text-[15px] font-medium hover:underline">{c.client} ↗</a>
+              <span class="ml-auto font-mono text-xs text-muted">{c.findings}</span>
+            </div>
+            {c.note && <p class="mt-1.5 text-xs text-muted">{c.note}</p>}
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <!-- Solo -->
+    <section id="solo" class="mb-16 scroll-mt-8">
+      <h2 class="mb-5 border-b border-border pb-2 font-mono text-lg font-semibold">Independent Solo Audits 🌱</h2>
+      <ul class="divide-y divide-border">
+        {solo.map((a) => (
+          <li class="flex flex-wrap items-center gap-x-3 gap-y-1.5 py-2.5" data-tags={a.tags.join(",")}>
+            <span class="min-w-0 flex-1 text-[15px]">{a.client}</span>
+            <span class="flex flex-wrap gap-1">{a.tags.map((t) => <Badge tag={t} />)}</span>
+            <span class="flex shrink-0 gap-2">
+              {a.links.map((l) =>
+                l.href === "private"
+                  ? <span class="font-mono text-xs text-muted">Private</span>
+                  : <a href={l.href as string} class="font-mono text-xs text-accent hover:underline">{l.label}</a>
+              )}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <!-- Bounties -->
+    <section id="bounties" class="mb-16 scroll-mt-8">
+      <h2 class="mb-5 border-b border-border pb-2 font-mono text-lg font-semibold">Bug Bounties 🎅</h2>
+      <ul class="divide-y divide-border">
+        {bounties.map((b) => (
+          <li class="flex flex-wrap items-center gap-x-3 gap-y-1 py-2.5">
+            <span
+              class="w-24 shrink-0 font-mono text-xs font-semibold"
+              style={`color:${sev[b.severity]}`}
+            >{b.severity}</span>
+            <span class="min-w-0 flex-1 text-[15px]">
+              {b.project}
+              <span class="ml-2 text-xs text-muted">{b.via}</span>
+            </span>
+            <span class="shrink-0">
+              {b.href
+                ? <a href={b.href} class="font-mono text-xs text-accent hover:underline">View ↗</a>
+                : <span class="font-mono text-xs text-muted">{b.note}</span>}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <p class="mt-4 text-xs leading-relaxed text-muted">{bountyFootnote}</p>
+    </section>
+
+    <!-- Writing -->
+    <section id="writing" class="mb-16 scroll-mt-8">
+      <h2 class="mb-5 border-b border-border pb-2 font-mono text-lg font-semibold">Publications 📑</h2>
+      <ul class="divide-y divide-border">
+        {publications.map((p) => (
+          <li class="flex items-center gap-3 py-2.5">
+            <a href={p.href} class="flex-1 text-[15px] hover:underline">{p.title} ↗</a>
+            <span class="font-mono text-xs text-muted">{p.source}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <footer class="border-t border-border pt-6 text-sm text-muted">
+      <div class="flex flex-wrap gap-x-5 gap-y-2">
+        <a href="https://twitter.com/0xcuriousapple" class="hover:text-text">twitter ↗</a>
+        <a href="https://github.com/0xcuriousapple" class="hover:text-text">github ↗</a>
+        <a href="mailto:hello@curiousapple.xyz" class="hover:text-text">hello@curiousapple.xyz</a>
+      </div>
+      <p class="mt-4 text-xs">🦇 curiousapple · built with Astro</p>
+    </footer>
+  </main>
+
+  <script>
+    // ── Theme toggle ──────────────────────────────────────────────
+    const root = document.documentElement;
+    const toggle = document.getElementById("theme-toggle");
+    const icon = toggle?.querySelector(".theme-icon");
+    const syncIcon = () => {
+      if (icon) icon.textContent = root.classList.contains("light") ? "🌙" : "☀️";
+    };
+    syncIcon();
+    toggle?.addEventListener("click", () => {
+      const light = root.classList.toggle("light");
+      localStorage.setItem("theme", light ? "light" : "dark");
+      syncIcon();
+    });
+
+    // ── Tag filtering ─────────────────────────────────────────────
+    const chips = Array.from(document.querySelectorAll<HTMLElement>("[data-filter-tag]"));
+    const items = Array.from(document.querySelectorAll<HTMLElement>("li[data-tags]"));
+    const sections = ["guardian", "macro", "solo"]
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => !!el);
+    const bar = document.getElementById("filter-bar");
+    const tagLabel = document.getElementById("filter-tag");
+    const countLabel = document.getElementById("filter-count");
+    const clearBtn = document.getElementById("filter-clear");
+    let active: string | null = null;
+
+    function apply() {
+      let shown = 0;
+      items.forEach((li) => {
+        const tags = (li.dataset.tags || "").split(",").filter(Boolean);
+        const out = active !== null && !tags.includes(active);
+        li.dataset.filteredOut = out ? "true" : "false";
+        if (!out) shown++;
+      });
+      // Hide a section if all its items are filtered out.
+      sections.forEach((sec) => {
+        const visible = sec.querySelectorAll('li[data-tags]:not([data-filtered-out="true"])').length;
+        sec.style.display = active !== null && visible === 0 ? "none" : "";
+      });
+      chips.forEach((c) => (c.dataset.active = c.dataset.filterTag === active ? "true" : "false"));
+      if (active) {
+        bar?.classList.remove("hidden");
+        bar?.classList.add("flex");
+        if (tagLabel) tagLabel.textContent = active;
+        if (countLabel) countLabel.textContent = `· ${shown} shown`;
+      } else {
+        bar?.classList.add("hidden");
+        bar?.classList.remove("flex");
+      }
+    }
+
+    function setFilter(tag: string | null) {
+      active = tag;
+      apply();
+    }
+
+    chips.forEach((chip) => {
+      const handler = () => {
+        const t = chip.dataset.filterTag || null;
+        setFilter(active === t ? null : t);
+      };
+      chip.addEventListener("click", handler);
+      chip.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          handler();
+        }
+      });
+    });
+    clearBtn?.addEventListener("click", () => setFilter(null));
+  </script>
+</Layout>

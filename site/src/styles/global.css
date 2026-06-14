@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", monospace;
+
+  --color-bg: #0a0a0b;
+  --color-surface: #111113;
+  --color-border: #1f1f23;
+  --color-muted: #8a8a93;
+  --color-text: #e7e7ea;
+  --color-accent: #6ee7b7;
+}
+
+/* Light theme — overrides the tokens the utilities reference. */
+html.light {
+  --color-bg: #fbfbfa;
+  --color-surface: #ffffff;
+  --color-border: #e7e7e4;
+  --color-muted: #65656d;
+  --color-text: #18181b;
+  --color-accent: #0c9b6b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Filterable tag chips */
+.tag-chip {
+  cursor: pointer;
+  transition: filter 0.12s ease, opacity 0.12s ease;
+}
+.tag-chip:hover {
+  filter: brightness(1.25);
+}
+.tag-chip[data-active="true"] {
+  outline: 1px solid currentColor;
+  outline-offset: 1px;
+}
+
+/* Hidden by the tag filter */
+[data-filtered-out="true"] {
+  display: none !important;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-accent) 30%, transparent);
+}

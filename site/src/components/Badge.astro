@@ -1,0 +1,16 @@
+---
+import { tagColors } from "../data/audits";
+interface Props { tag: string; }
+const { tag } = Astro.props;
+const color = tagColors[tag] ?? "#6A737D";
+---
+<span
+  class="tag-chip inline-flex items-center rounded px-1.5 py-0.5 text-[11px] font-medium leading-none tracking-tight font-mono"
+  data-filter-tag={tag}
+  role="button"
+  tabindex="0"
+  title={`Filter by ${tag}`}
+  style={`color:${color};background:color-mix(in srgb, ${color} 14%, transparent);border:1px solid color-mix(in srgb, ${color} 30%, transparent)`}
+>
+  {tag}
+</span>
