@@ -1,0 +1,603 @@
+---
+import Layout from "../components/Layout.astro";
+import Badge from "../components/Badge.astro";
+import {
+  guardian, macro, contests, solo, bounties, publications,
+  type Audit,
+} from "../data/audits";
+
+const soloEngagements = solo.reduce((n, a) => n + Math.max(1, a.links.length), 0);
+
+const stats = [
+  { value: "$10B+", label: "TVL secured" },
+  { value: "70+", label: "Engagements" },
+  { value: "8", label: "Critical / High bounties" },
+  { value: "3×", label: "1st-place contests" },
+];
+
+const sev: Record<string, string> = {
+  Critical: "#ff5c5c",
+  High: "#ff9f43",
+  "High/Medium": "#f6c945",
+  Medium: "#f6c945",
+};
+
+// Renders the report cell for an engagement.
+function reportLabel(a: Audit) {
+  if (!a.report) return null;
+  if (a.report === "private") return { text: "Private", muted: true };
+  return { text: "View", muted: false, href: a.report as string };
+}
+
+// Headline brand names shown as translucent pills; clicking reveals the full list.
+const guardianNames = ["LayerZero", "GMX", "USDT0", "M0", "Gamma", "Synthetix", "Olympus", "Fastlane", "Yuga", "Polynomial", "Aria", "PYUSD", "Bigcoin", "Perpcity"];
+const macroChipNames = ["Connext", "Kwenta", "MakerDAO", "TreasureDAO", "Sommelier", "PartyDAO", "Synthetix", "Thirdweb", "Frax"];
+
+// All protocol types covered in each group (shown inside the reveal box).
+const guardianTypes = [...new Set(guardian.flatMap((a) => a.tags))];
+const macroTypes = [...new Set(macro.flatMap((a) => a.tags))];
+
+// Bounties: first 5, expand for the rest.
+const bountiesPreview = bounties.slice(0, 5);
+const bountiesRest = bounties.slice(5);
+const bountiesRestCounts = ["Critical", "High", "High/Medium", "Medium"]
+  .map((s) => ({ severity: s, n: bountiesRest.filter((b) => b.severity === s).length }))
+  .filter((x) => x.n > 0);
+---
+
+<Layout>
+  <div id="bat-spotlight" aria-hidden="true"></div>
+
+  <main class="mx-auto max-w-3xl px-5 py-16 sm:py-24">
+    <!-- Hero -->
+    <header class="mb-10">
+      <img
+        src="/pfp.webp"
+        alt="curiousapple — penguin in a batman cowl"
+        width="256"
+        height="256"
+        class="float-right ml-4 hidden h-32 w-32 rounded-2xl border border-border sm:block"
+      />
+      <div class="flex items-center justify-between gap-3 sm:justify-start">
+        <div class="flex min-w-0 items-center gap-3">
+          <span class="text-3xl">🦇</span>
+          <h1 class="font-mono text-2xl font-semibold tracking-tight">curiousapple</h1>
+        </div>
+        <div class="flex items-center gap-1.5">
+          <a
+            href="https://t.me/curiousapple"
+            aria-label="DM on Telegram"
+            title="Telegram — @curiousapple"
+            class="icon-radiate grid h-7 w-7 place-items-center rounded-lg border text-accent/80 transition-colors hover:text-accent"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor" class="h-3.5 w-3.5" aria-hidden="true">
+              <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.139-5.061 3.345-.479.329-.913.489-1.302.481-.428-.009-1.252-.242-1.865-.44-.752-.244-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+            </svg>
+          </a>
+          <a
+            href="https://x.com/0xcuriousapple"
+            aria-label="DM on X"
+            title="X — 0xcuriousapple"
+            class="icon-radiate grid h-7 w-7 place-items-center rounded-lg border text-accent/80 transition-colors hover:text-accent"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor" class="h-3 w-3" aria-hidden="true">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+          <button
+            id="theme-toggle"
+            type="button"
+            aria-label="Toggle theme"
+            class="grid h-7 w-7 place-items-center rounded-lg border border-border text-muted transition-colors hover:text-text"
+          >
+            <span class="theme-icon text-xs">🌙</span>
+          </button>
+        </div>
+      </div>
+      <img
+        src="/pfp.webp"
+        alt="curiousapple — penguin in a batman cowl"
+        width="256"
+        height="256"
+        class="float-right ml-4 mt-4 h-24 w-24 rounded-2xl border border-border sm:hidden"
+      />
+      <p class="mt-4 text-muted sm:mt-3">an apple a day keeps the hacker away 🍏</p>
+      <div class="mt-1 max-w-xl space-y-1 text-[15px] leading-relaxed text-text/90">
+        <p>
+          <span class="text-accent">Lead Security Researcher</span> at
+          <a href="https://guardianaudits.com/" class="underline decoration-border underline-offset-4 hover:decoration-accent">Guardian</a>,
+          previously at <a href="https://0xmacro.com/" class="underline decoration-border underline-offset-4 hover:decoration-accent">0xMacro</a>.
+        </p>
+        <details class="mt-3 max-w-xl text-sm">
+          <summary class="inline-flex cursor-pointer select-none items-center gap-1.5 text-text/70 transition-colors hover:text-accent">
+            <span class="disc-chevron text-xs text-accent">▸</span>
+            <span class="underline decoration-accent/40 decoration-dotted underline-offset-4">New here? What do we actually do?</span>
+          </summary>
+          <p class="mt-3 leading-relaxed text-muted">
+            we basically get paid to hack protocols, with permission. or: we're handed a
+            lock and told to open it without the key, all within a fixed amount of time.
+            filmy, aye?
+          </p>
+          <img
+            src="/avg.webp"
+            alt="avengers, assembled"
+            width="544"
+            height="372"
+            loading="lazy"
+            class="mt-4 w-full max-w-[17rem] rounded-lg border border-border"
+          />
+          <p class="mt-4 leading-relaxed text-muted">
+            companies give us their code, and we look for the mistakes that could let an
+            actual hacker drain millions or exploit the system.
+          </p>
+          <p class="mt-3 leading-relaxed text-muted">
+            day in, day out, night in, night out, you'll find us reading code,
+            writing invariants, or fuzzing. 🦇
+          </p>
+        </details>
+        </div>
+        <div class="clear-both"></div>
+
+      <div class="mt-5 grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-border bg-border sm:grid-cols-4">
+        {stats.map((s) => (
+          <div class="bg-surface px-4 py-4">
+            <div class="font-mono text-xl font-semibold text-accent">{s.value}</div>
+            <div class="mt-1 text-xs text-muted">{s.label}</div>
+          </div>
+        ))}
+      </div>
+
+      <nav class="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-sm text-muted">
+        <a href="#guardian" class="hover:text-text">Guardian</a>
+        <a href="#macro" class="hover:text-text">0xMacro</a>
+        <a href="#contests" class="hover:text-text">Contests</a>
+        <a href="#solo" class="hover:text-text">Solo</a>
+        <a href="#bounties" class="hover:text-text">Bounties</a>
+        <a href="#writing" class="hover:text-text">Writing</a>
+      </nav>
+
+      <div id="filter-bar" class="mt-5 hidden items-center gap-2 text-sm">
+        <span class="text-muted">Filtering by</span>
+        <span id="filter-tag" class="font-mono text-accent"></span>
+        <button id="filter-clear" type="button" class="rounded border border-border px-2 py-0.5 text-xs text-muted hover:text-text">
+          clear ✕
+        </button>
+        <span id="filter-count" class="ml-1 text-xs text-muted"></span>
+      </div>
+    </header>
+
+    <!-- Guardian -->
+    <section id="guardian" class="mb-16 scroll-mt-8" data-reveal>
+      <div class="mb-5 flex items-baseline justify-between border-b border-border pb-2">
+        <h2 class="font-mono text-lg font-semibold">Lead · Guardian</h2>
+        <span data-reveal-meta class="text-xs text-muted">{guardian.length} engagements</span>
+        <button type="button" data-collapse-reveal class="font-mono text-xs text-accent hover:underline" aria-controls="guardian-engagements" hidden>
+          Collapse
+        </button>
+      </div>
+      <div>
+        <button type="button" class="brand-box group flex w-full flex-col items-center gap-4 rounded-xl border border-border px-4 py-9 text-center" aria-expanded="false" aria-controls="guardian-engagements">
+          <div class="flex flex-wrap items-center justify-center gap-2">
+            {guardianNames.map((n) => (
+              <span class="rounded-full border border-border bg-surface/70 px-3 py-1 text-sm">{n}</span>
+            ))}
+          </div>
+          <div class="flex max-w-md flex-wrap items-center justify-center gap-1">
+            {guardianTypes.map((t) => <Badge tag={t} />)}
+          </div>
+          <span class="flex items-center gap-1.5 text-xs font-medium text-accent">
+            <span>▸</span> Tap to view all {guardian.length} engagements
+          </span>
+        </button>
+        <ul id="guardian-engagements" class="full-list divide-y divide-border" hidden>
+          {guardian.map((a, i) => (
+            <li class="flex flex-wrap items-center gap-x-3 gap-y-1.5 py-2.5" data-tags={a.tags.join(",")}>
+              <span class="hidden w-6 shrink-0 font-mono text-xs text-muted sm:block">{i + 1}</span>
+              <span class="min-w-0 flex-1 text-[15px]">{a.client}</span>
+              <span class="flex flex-wrap gap-1">{a.tags.map((t) => <Badge tag={t} />)}</span>
+            </li>
+          ))}
+          <li class="flex justify-center py-3">
+            <button type="button" data-collapse-reveal class="font-mono text-xs text-accent hover:underline" aria-controls="guardian-engagements" hidden>
+              Collapse
+            </button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 0xMacro -->
+    <section id="macro" class="mb-16 scroll-mt-8" data-reveal>
+      <div class="mb-5 flex items-baseline justify-between border-b border-border pb-2">
+        <h2 class="font-mono text-lg font-semibold">Previously · 0xMacro</h2>
+        <span data-reveal-meta class="text-xs text-muted">Apprentice → Associate → Lead · {macro.length} engagements</span>
+        <button type="button" data-collapse-reveal class="font-mono text-xs text-accent hover:underline" aria-controls="macro-engagements" hidden>
+          Collapse
+        </button>
+      </div>
+      <div>
+        <button type="button" class="brand-box group flex w-full flex-col items-center gap-4 rounded-xl border border-border px-4 py-9 text-center" aria-expanded="false" aria-controls="macro-engagements">
+          <div class="flex flex-wrap items-center justify-center gap-2">
+            {macroChipNames.map((n) => (
+              <span class="rounded-full border border-border bg-surface/70 px-3 py-1 text-sm">{n}</span>
+            ))}
+          </div>
+          <div class="flex max-w-md flex-wrap items-center justify-center gap-1">
+            {macroTypes.map((t) => <Badge tag={t} />)}
+          </div>
+          <span class="flex items-center gap-1.5 text-xs font-medium text-accent">
+            <span>▸</span> Tap to view all {macro.length} engagements
+          </span>
+        </button>
+        <ul id="macro-engagements" class="full-list divide-y divide-border" hidden>
+          {macro.map((a, i) => {
+            const r = reportLabel(a);
+            return (
+              <li class="flex flex-wrap items-center gap-x-3 gap-y-1.5 py-2.5" data-tags={a.tags.join(",")}>
+                <span class="hidden w-6 shrink-0 font-mono text-xs text-muted sm:block">{i + 1}</span>
+                <span class="min-w-0 flex-1 text-[15px]">
+                  {a.client}
+                  {a.position && <span class="ml-2 text-xs text-muted">{a.position}</span>}
+                </span>
+                <span class="flex flex-wrap gap-1">{a.tags.map((t) => <Badge tag={t} />)}</span>
+                <span class="w-14 shrink-0 text-right">
+                  {r?.href
+                    ? <a href={r.href} class="font-mono text-xs text-accent hover:underline">View ↗</a>
+                    : r && <span class="font-mono text-xs text-muted">{r.text}</span>}
+                </span>
+              </li>
+            );
+          })}
+          <li class="flex justify-center py-3">
+            <button type="button" data-collapse-reveal class="font-mono text-xs text-accent hover:underline" aria-controls="macro-engagements" hidden>
+              Collapse
+            </button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contests -->
+    <section id="contests" class="mb-16 scroll-mt-8">
+      <div class="mb-5 flex items-baseline justify-between border-b border-border pb-2">
+        <h2 class="font-mono text-lg font-semibold">Public Contests · Podiums</h2>
+        <span class="text-xs text-muted">{contests.length} podiums</span>
+      </div>
+      <ul class="space-y-3">
+        {contests.map((c) => (
+          <li class="rounded-lg border border-border bg-surface px-4 py-3">
+            <div class="flex flex-wrap items-center gap-x-3 gap-y-1.5">
+              <span class="font-mono text-sm font-semibold text-accent">{c.place}</span>
+              <a href={c.href} class="text-[15px] font-medium hover:underline">{c.client} ↗</a>
+              <span class="ml-auto flex flex-wrap justify-end gap-1">{c.tags.map((t) => <Badge tag={t} />)}</span>
+            </div>
+            {c.note && <p class="mt-1.5 text-xs text-muted">{c.note}</p>}
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <!-- Solo -->
+    <section id="solo" class="mb-16 scroll-mt-8">
+      <div class="mb-5 flex items-baseline justify-between border-b border-border pb-2">
+        <h2 class="font-mono text-lg font-semibold">Independent Solo Audits</h2>
+        <span class="text-xs text-muted">{soloEngagements} engagements</span>
+      </div>
+      <ul class="divide-y divide-border">
+        {solo.map((a) => (
+          <li class="flex flex-wrap items-center gap-x-3 gap-y-1.5 py-2.5" data-tags={a.tags.join(",")}>
+            <span class="min-w-0 flex-1 text-[15px]">{a.client}</span>
+            <span class="flex flex-wrap gap-1">{a.tags.map((t) => <Badge tag={t} />)}</span>
+            <span class="flex shrink-0 gap-2">
+              {a.links.map((l) =>
+                l.href === "private"
+                  ? <span class="font-mono text-xs text-muted">Private</span>
+                  : <a href={l.href as string} class="font-mono text-xs text-accent hover:underline">{l.label} ↗</a>
+              )}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <!-- Bounties -->
+    <section id="bounties" class="mb-16 scroll-mt-8" data-bounty>
+      <div class="mb-5 flex items-baseline justify-between border-b border-border pb-2">
+        <h2 class="font-mono text-lg font-semibold">Bug Bounties</h2>
+        <span data-bounty-meta class="text-xs text-muted">{bounties.length} disclosures</span>
+        <button type="button" data-bounty-collapse class="font-mono text-xs text-accent hover:underline" hidden>
+          Collapse
+        </button>
+      </div>
+      <ul class="divide-y divide-border">
+        {bountiesPreview.map((b) => (
+          <li class="flex items-baseline gap-x-3 py-2.5">
+            <span
+              class="w-24 shrink-0 font-mono text-xs font-semibold"
+              style={`color:${sev[b.severity]}`}
+            >{b.severity}</span>
+            <div class="min-w-0 flex-1">
+              <div class="flex items-baseline gap-x-3">
+                <span class="min-w-0 flex-1 text-[15px]">{b.project}</span>
+                <span class="shrink-0">
+                  {b.href
+                    ? <a href={b.href} class="font-mono text-xs text-accent hover:underline">View ↗</a>
+                    : <span class="font-mono text-xs text-muted">{b.note}</span>}
+                </span>
+              </div>
+              <div class="text-xs text-muted">{b.via}</div>
+            </div>
+          </li>
+        ))}
+        {bountiesRest.map((b) => (
+          <li data-bounty-rest hidden class="flex items-baseline gap-x-3 py-2.5">
+            <span
+              class="w-24 shrink-0 font-mono text-xs font-semibold"
+              style={`color:${sev[b.severity]}`}
+            >{b.severity}</span>
+            <div class="min-w-0 flex-1">
+              <div class="flex items-baseline gap-x-3">
+                <span class="min-w-0 flex-1 text-[15px]">{b.project}</span>
+                <span class="shrink-0">
+                  {b.href
+                    ? <a href={b.href} class="font-mono text-xs text-accent hover:underline">View ↗</a>
+                    : <span class="font-mono text-xs text-muted">{b.note}</span>}
+                </span>
+              </div>
+              <div class="text-xs text-muted">{b.via}</div>
+            </div>
+          </li>
+        ))}
+      </ul>
+      <button type="button" data-bounty-expand class="mt-1 inline-flex cursor-pointer select-none flex-wrap items-center gap-x-1.5 gap-y-1 py-2 text-xs text-muted transition-colors hover:text-text">
+        <span class="text-accent">▸</span>
+        <span>Expand:</span>
+        {bountiesRestCounts.map((c, i) => (
+          <span class="flex items-center gap-1.5">
+            {i > 0 && <span class="opacity-40">·</span>}
+            <span>{c.n}{i === 0 ? " more" : ""}</span>
+            <span class="font-semibold" style={`color:${sev[c.severity]}`}>
+              {i === 0 ? `${c.severity}s` : c.severity}
+            </span>
+          </span>
+        ))}
+      </button>
+      <div data-bounty-collapse-row hidden class="flex justify-center border-t border-border">
+        <button type="button" data-bounty-collapse class="py-3 font-mono text-xs text-accent hover:underline">
+          Collapse
+        </button>
+      </div>
+    </section>
+
+    <!-- Writing -->
+    <section id="writing" class="mb-16 scroll-mt-8">
+      <div class="mb-5 flex items-baseline justify-between border-b border-border pb-2">
+        <h2 class="font-mono text-lg font-semibold">Publications</h2>
+        <span class="text-xs text-muted">{publications.length} articles</span>
+      </div>
+      <ul class="divide-y divide-border">
+        {publications.map((p) => (
+          <li class="flex items-center gap-3 py-2.5">
+            <a href={p.href} class="flex-1 text-[15px] hover:underline">{p.title} ↗</a>
+            <span class="font-mono text-xs text-muted">{p.source}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <!-- Closing -->
+    <section class="mb-8">
+      <div data-closing-media class="flex flex-col items-center gap-8 sm:flex-row sm:items-stretch sm:justify-center sm:gap-6">
+        <img
+          data-meme-image
+          src="/meme.webp"
+          alt="So tell us, what do you actually do around here? — I traverse graphs"
+          width="480"
+          height="489"
+          loading="lazy"
+          class="w-full max-w-[20rem] rounded-lg border border-border bg-surface object-cover"
+        />
+        <div data-tweet-wrap class="w-full max-w-[20rem] [&_.twitter-tweet]:!mt-0">
+          <blockquote class="twitter-tweet" data-theme="dark" data-dnt="true" data-width="320">
+            <a href="https://twitter.com/0xcuriousapple/status/1714242281199518128"></a>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+    <script is:inline async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+    <footer class="flex flex-nowrap items-center justify-between gap-2 border-t border-border pt-6 text-[clamp(0.6rem,2.8vw,0.875rem)] text-muted sm:text-sm">
+      <div class="flex flex-nowrap items-center gap-[clamp(0.35rem,2.2vw,1.25rem)]">
+        <a href="https://x.com/0xcuriousapple" class="hover:text-text">x ↗</a>
+        <a href="https://t.me/curiousapple" class="hover:text-text">telegram ↗</a>
+        <a href="https://github.com/0xcuriousapple" class="hover:text-text">github ↗</a>
+        <a href="mailto:hello@curiousapple.xyz" class="hover:text-text">mail ↗</a>
+      </div>
+      <p class="shrink-0 text-[clamp(0.6rem,2.8vw,0.75rem)]">🦇 curiousapple</p>
+    </footer>
+  </main>
+
+  <script>
+    // ── Bat-signal cursor spotlight ───────────────────────────────
+    const spot = document.getElementById("bat-spotlight");
+    if (spot && matchMedia("(pointer:fine)").matches) {
+      let tx = innerWidth / 2,
+        ty = innerHeight / 2,
+        cx = tx,
+        cy = ty,
+        shown = false,
+        raf = 0;
+      const loop = () => {
+        cx += (tx - cx) * 0.15;
+        cy += (ty - cy) * 0.15;
+        spot.style.transform = `translate3d(${cx}px, ${cy}px, 0)`;
+        raf = Math.abs(tx - cx) + Math.abs(ty - cy) > 0.5 ? requestAnimationFrame(loop) : 0;
+      };
+      addEventListener("pointermove", (e) => {
+        tx = e.clientX;
+        ty = e.clientY;
+        if (!shown) {
+          shown = true;
+          spot.classList.add("on");
+        }
+        if (!raf) raf = requestAnimationFrame(loop);
+      });
+    }
+
+    // ── Brand-box reveal (guardian / 0xMacro) ─────────────────────
+    document.querySelectorAll<HTMLElement>("[data-reveal]").forEach((wrap) => {
+      const box = wrap.querySelector<HTMLElement>(".brand-box");
+      const list = wrap.querySelector<HTMLElement>(".full-list");
+      const meta = wrap.querySelector<HTMLElement>("[data-reveal-meta]");
+      const collapses = Array.from(wrap.querySelectorAll<HTMLButtonElement>("[data-collapse-reveal]"));
+      if (!box || !list || !meta || collapses.length === 0) return;
+      const setExpanded = (expanded: boolean) => {
+        box.hidden = expanded;
+        box.setAttribute("aria-expanded", String(expanded));
+        meta.hidden = expanded;
+        collapses.forEach((collapse) => {
+          collapse.hidden = !expanded;
+        });
+        list.hidden = !expanded;
+        if (!expanded) {
+          setFilter(null);
+          wrap.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      };
+      box.addEventListener("click", () => setExpanded(true));
+      collapses.forEach((collapse) => {
+        collapse.addEventListener("click", () => setExpanded(false));
+      });
+      // Clicking/tapping anywhere in the expanded area (other than a link,
+      // tag chip, or button) collapses it again.
+      list.addEventListener("click", (e) => {
+        if ((e.target as HTMLElement).closest("a, button, [data-filter-tag]")) return;
+        setExpanded(false);
+      });
+    });
+
+    // ── Bounties expand / collapse ────────────────────────────────
+    document.querySelectorAll<HTMLElement>("[data-bounty]").forEach((sec) => {
+      const meta = sec.querySelector<HTMLElement>("[data-bounty-meta]");
+      const expand = sec.querySelector<HTMLElement>("[data-bounty-expand]");
+      const collapseRow = sec.querySelector<HTMLElement>("[data-bounty-collapse-row]");
+      const rest = Array.from(sec.querySelectorAll<HTMLElement>("[data-bounty-rest]"));
+      const collapses = Array.from(sec.querySelectorAll<HTMLButtonElement>("[data-bounty-collapse]"));
+      const list = sec.querySelector<HTMLElement>("ul");
+      if (!meta || !expand || !collapseRow || rest.length === 0) return;
+      const setBounty = (expanded: boolean) => {
+        meta.hidden = expanded;
+        expand.hidden = expanded;
+        collapseRow.hidden = !expanded;
+        rest.forEach((r) => (r.hidden = !expanded));
+        collapses.forEach((c) => (c.hidden = !expanded));
+        if (!expanded) sec.scrollIntoView({ behavior: "smooth", block: "start" });
+      };
+      expand.addEventListener("click", () => setBounty(true));
+      collapses.forEach((c) => c.addEventListener("click", () => setBounty(false)));
+      // Clicking/tapping the list (other than a link or button) toggles it.
+      list?.addEventListener("click", (e) => {
+        if ((e.target as HTMLElement).closest("a, button, [data-filter-tag]")) return;
+        setBounty(collapseRow.hidden);
+      });
+    });
+
+    // ── Closing media sizing ──────────────────────────────────────
+    const closingMedia = document.querySelector<HTMLElement>("[data-closing-media]");
+    const memeImage = closingMedia?.querySelector<HTMLImageElement>("[data-meme-image]");
+    const tweetWrap = closingMedia?.querySelector<HTMLElement>("[data-tweet-wrap]");
+    if (memeImage && tweetWrap) {
+      let syncTimer = 0;
+      const syncMemeHeight = () => {
+        const renderedTweet = tweetWrap.querySelector<HTMLElement>("iframe, .twitter-tweet-rendered");
+        const tweetHeight = Math.round((renderedTweet || tweetWrap).getBoundingClientRect().height);
+        if (tweetHeight > 0) memeImage.style.height = `${tweetHeight}px`;
+      };
+      const scheduleSync = () => {
+        clearTimeout(syncTimer);
+        syncTimer = window.setTimeout(syncMemeHeight, 50);
+      };
+      addEventListener("load", scheduleSync);
+      addEventListener("resize", scheduleSync);
+      new MutationObserver(scheduleSync).observe(tweetWrap, {
+        attributes: true,
+        childList: true,
+        subtree: true,
+      });
+      [250, 1000, 2500].forEach((delay) => setTimeout(syncMemeHeight, delay));
+    }
+
+    // ── Theme toggle ──────────────────────────────────────────────
+    const root = document.documentElement;
+    const toggle = document.getElementById("theme-toggle");
+    const icon = toggle?.querySelector(".theme-icon");
+    const syncIcon = () => {
+      if (icon) icon.textContent = root.classList.contains("light") ? "🌙" : "☀️";
+    };
+    syncIcon();
+    toggle?.addEventListener("click", () => {
+      const light = root.classList.toggle("light");
+      localStorage.setItem("theme", light ? "light" : "dark");
+      syncIcon();
+    });
+
+    // ── Tag filtering ─────────────────────────────────────────────
+    const chips = Array.from(document.querySelectorAll<HTMLElement>("[data-filter-tag]")).filter(
+      (c) => !c.closest(".brand-box"),
+    );
+    const items = Array.from(document.querySelectorAll<HTMLElement>("li[data-tags]"));
+    const sections = ["guardian", "macro", "solo"]
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => !!el);
+    const bar = document.getElementById("filter-bar");
+    const tagLabel = document.getElementById("filter-tag");
+    const countLabel = document.getElementById("filter-count");
+    const clearBtn = document.getElementById("filter-clear");
+    let active: string | null = null;
+
+    function apply() {
+      let shown = 0;
+      items.forEach((li) => {
+        const tags = (li.dataset.tags || "").split(",").filter(Boolean);
+        const out = active !== null && !tags.includes(active);
+        li.dataset.filteredOut = out ? "true" : "false";
+        if (!out) shown++;
+      });
+      // Hide a section if all its items are filtered out.
+      sections.forEach((sec) => {
+        const visible = sec.querySelectorAll('li[data-tags]:not([data-filtered-out="true"])').length;
+        sec.style.display = active !== null && visible === 0 ? "none" : "";
+      });
+      chips.forEach((c) => (c.dataset.active = c.dataset.filterTag === active ? "true" : "false"));
+      if (active) {
+        bar?.classList.remove("hidden");
+        bar?.classList.add("flex");
+        if (tagLabel) tagLabel.textContent = active;
+        if (countLabel) countLabel.textContent = `· ${shown} shown`;
+      } else {
+        bar?.classList.add("hidden");
+        bar?.classList.remove("flex");
+      }
+    }
+
+    function setFilter(tag: string | null) {
+      active = tag;
+      apply();
+    }
+
+    chips.forEach((chip) => {
+      const handler = () => {
+        const t = chip.dataset.filterTag || null;
+        setFilter(active === t ? null : t);
+      };
+      chip.addEventListener("click", handler);
+      chip.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          handler();
+        }
+      });
+    });
+    clearBtn?.addEventListener("click", () => setFilter(null));
+  </script>
+</Layout>

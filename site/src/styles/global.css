@@ -1,0 +1,208 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter Variable", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono Variable", "JetBrains Mono", ui-monospace, "SF Mono", monospace;
+
+  --color-bg: #0a0a0b;
+  --color-surface: #111113;
+  --color-border: #1f1f23;
+  --color-muted: #8a8a93;
+  --color-text: #e7e7ea;
+  --color-accent: #6ee7b7;
+}
+
+/* Light theme — overrides the tokens the utilities reference. */
+html.light {
+  --color-bg: #fbfbfa;
+  --color-surface: #ffffff;
+  --color-border: #e7e7e4;
+  --color-muted: #65656d;
+  --color-text: #18181b;
+  --color-accent: #0c9b6b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Filterable tag chips */
+.tag-chip {
+  cursor: pointer;
+  transition: filter 0.12s ease, opacity 0.12s ease;
+}
+.tag-chip:hover {
+  filter: brightness(1.25);
+}
+.tag-chip[data-active="true"] {
+  outline: 1px solid currentColor;
+  outline-offset: 1px;
+}
+
+/* Hidden by the tag filter */
+[data-filtered-out="true"] {
+  display: none !important;
+}
+
+/* Explainer disclosure */
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+.disc-chevron {
+  display: inline-block;
+  transition: transform 0.15s ease;
+}
+details[open] .disc-chevron {
+  transform: rotate(90deg);
+}
+.when-open {
+  display: none;
+}
+details[open] .when-closed {
+  display: none;
+}
+details[open] .when-open {
+  display: inline;
+}
+
+/* Brand-name reveal box (guardian / 0xMacro) */
+@property --bx-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.brand-box {
+  position: relative;
+  cursor: pointer;
+  background: color-mix(in srgb, var(--color-surface) 60%, transparent);
+  border-color: color-mix(in srgb, var(--color-accent) 20%, var(--color-border));
+  box-shadow: 0 0 16px -10px color-mix(in srgb, var(--color-accent) 30%, transparent);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  animation: bx-glow 4s ease-in-out infinite;
+}
+.brand-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 24px -8px color-mix(in srgb, var(--color-accent) 40%, transparent);
+}
+@keyframes bx-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 12px -10px color-mix(in srgb, var(--color-accent) 22%, transparent);
+  }
+  50% {
+    box-shadow: 0 0 20px -8px color-mix(in srgb, var(--color-accent) 36%, transparent);
+  }
+}
+/* Revolving accent tint around the border */
+.brand-box::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: conic-gradient(
+    from var(--bx-angle),
+    transparent 0 50%,
+    color-mix(in srgb, var(--color-accent) 30%, transparent) 66%,
+    color-mix(in srgb, var(--color-accent) 65%, transparent) 76%,
+    color-mix(in srgb, var(--color-accent) 30%, transparent) 86%,
+    transparent 96%
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+  animation: bx-rotate 5s linear infinite;
+}
+@keyframes bx-rotate {
+  to {
+    --bx-angle: 360deg;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .brand-box {
+    animation: none;
+  }
+  .brand-box::after {
+    animation: none;
+  }
+}
+
+/* Radiating social icons */
+.icon-radiate {
+  border-color: color-mix(in srgb, var(--color-accent) 45%, transparent);
+  animation: radiate 2.4s ease-out infinite;
+}
+.icon-radiate:hover {
+  animation-play-state: paused;
+}
+@keyframes radiate {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-accent) 40%, transparent);
+  }
+  70% {
+    box-shadow: 0 0 0 9px color-mix(in srgb, var(--color-accent) 0%, transparent);
+  }
+  100% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-accent) 0%, transparent);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .icon-radiate {
+    animation: none;
+  }
+}
+
+/* ── Bat-signal cursor spotlight ──────────────────────────── */
+#bat-spotlight {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 460px;
+  height: 460px;
+  margin: -230px 0 0 -230px;
+  pointer-events: none;
+  z-index: -1;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--color-accent) 13%, transparent),
+    transparent 62%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  transform: translate3d(-50vw, -50vh, 0);
+  will-change: transform;
+}
+#bat-spotlight.on {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #bat-spotlight {
+    display: none;
+  }
+}
+
+body {
+  background-color: var(--color-bg);
+  /* Subtle radial glow behind the hero (top-right), fixed so it stays put. */
+  background-image: radial-gradient(
+    48rem 26rem at 88% -8%,
+    color-mix(in srgb, var(--color-accent) 9%, transparent),
+    transparent 70%
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-accent) 30%, transparent);
+}
